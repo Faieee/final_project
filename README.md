@@ -30,31 +30,39 @@
 Possible Hypotheses:
 1. Higher age will be likely to yield higher income level over $50K.
 2. Country is expected to yield higher incomes in 1st world and capitalist countries.
-3. Education Level is expected to yield the lowest results at the extremes (high school or less, and doctorate).  With doctorates, many students are earning poverty level wages by working for professors, or they major in something esoteric that does not connect to the labor force.  We would expect the Master’s degree holders to earn the most, followed by the Bachelor’s degree.  The Associates may or may not hit the threshold of $50K.  The AA degree may be a border zone of where $50K begins for some people.
+3. Education Level is expected to yield the lowest results at the lower end (high school or less).  We would expect the Master’s degree holders to earn the most, followed by the Bachelor’s degree.  The Associates may or may not hit the threshold of $50K.  The AA degree may be a border zone of where $50K begins for some people.
 4. Gender may be related in non-U.S. countries where the mother is more expected to stay home with children and/or work part-time.
 5.  Executive/professional work would likely yield higher income than clerical or service industry occupations.
 6.  Race may not be relevant as of the date of this dataset, especially in countries where the nationality is homogenous.
 7.  Families with children may have lower income attainment.  Single people may be more career-oriented and earn higher incomes.
 
+### Other Questions Discussed:
+- **Perhaps we should focus solely on the 40-hour participants.**
+- Can we meaningfully combine federal, state and local government into a public sector category?
+- Can we meaningfully combine educational attainment into less than high school, high school, and Bachelor’s and graduate school?
+- Does capital gains represent a proxy for social class, or does it not matter to the regression equation?
+- What are the fewest amount of variables we can use to still have high accuracy? 
 
-### **Main Branch**
-- ✓ Includes a README.md README.md 
+## Communication Methods:
+Aside from communication on Slack, our Zoom Meeting Schedule (in addition to Monday- Wednesday class time) will be:
+Fridays at 7:00 PM
+Sundays at 12:00 PM
+(The paid version of Zoom will allow us to have multiple presenters if multiple people need to share. Zoom will also have whiteboards if needed.)
 
-### **README.md must include:**
-- ✓ Description of the communication protocols 
+### Division of Labor:
+- Lina & Sharon = Database.
+- Anton & Amanda = Machine Learning/Regression.
+- (Amanda= Report-writer for Segment 1; Zoom Coordinator; mapped out data columns for Segment 1; will focus more on machine learning/regression in future segments.  Anton did the supervised machine learning in Segment 1).
+- Elise – Visualization; Miscellaneous.
 
 ### **Individual Branches**
-- ✓ At least one branch for each team member 
-- ✓ Each team member has at least four commits from the duration of the first segment 
-Note: The descriptions and explanations required in all other project deliverables should also be in your README.md as part of your outline, unless otherwise noted.
+- We have at least one branch for each team member.
+- Each team member has at least four commits from the duration of the first segment on either their own branch or the main branch.
 
 ### **Machine Learning Model**
-Team members present a provisional machine learning model that stands in for the final machine learning model and accomplishes the following: 
-- ✓ Takes in data in from the provisional database 
-- ✓ Outputs label(s) for input data
+- We present here a provisional machine learning model that stands in for the final machine learning model that takes in data in from the provisional database and outputs labels for input data.
 
 ### **Database**
-Team members present a provisional database that stands in for the final database and accomplishes the following: 
-- ✓ Sample data that mimics the expected final database structure or schema 
-- ✓ Draft machine learning module is connected to the provisional database
-
+- We present here a provisional database that stands in for the final database and contains: 
+- Sample data that mimics the expected final database structure or schema.
+- A draft machine learning module is connected to the provisional database.
