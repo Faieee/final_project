@@ -45,9 +45,9 @@ Possible Hypotheses:
 
 ## Communication Methods:
 Aside from communication on Slack, our Zoom Meeting Schedule (in addition to Monday- Wednesday class time) will be:
-Fridays at 7:00 PM
-Sundays at 12:00 PM
-(The paid version of Zoom will allow us to have multiple presenters if multiple people need to share. Zoom will also have whiteboards if needed.)
+- Fridays at 7:00 PM
+- Sundays at 12:00 PM
+- (The paid version of Zoom will allow us to have multiple presenters if multiple people need to share. Zoom will also have whiteboards if needed.)
 
 ### Division of Labor:
 - Lina & Sharon = Database.
@@ -59,10 +59,10 @@ Sundays at 12:00 PM
 - We have at least one branch for each team member.
 - Each team member has at least four commits from the duration of the first segment on either their own branch or the main branch.
 
-### **Machine Learning Model**
+## **Machine Learning Model**
 - We present here a provisional machine learning model that stands in for the final machine learning model that takes in data in from the provisional database and outputs labels for input data.
 
-### **Database**
+## **Database**
 - We present here a provisional database that stands in for the final database and contains: 
 - Sample data that mimics the expected final database structure or schema.
 - A draft machine learning module is connected to the provisional database.
