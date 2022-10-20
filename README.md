@@ -57,12 +57,12 @@ Aside from communication on Slack, our Zoom Meeting Schedule (in addition to Mon
 
 ### **Individual Branches**
 - We have at least one branch for each team member.
-- Each team member has at least four commits from the duration of the first segment on either their own branch or the main branch.
+- Each team member has at least four commits from the duration of the first segment on either their own branch or the main branch, and/or via Slack.
 
 ## **Machine Learning Model**
 - We present here a provisional machine learning model that stands in for the final machine learning model that takes in data in from the provisional database and outputs labels for input data.
 
 ## **Database**
 - We present here a provisional database that stands in for the final database and contains: 
-- Sample data that mimics the expected final database structure or schema.
-- A draft machine learning module is connected to the provisional database.
+  - Sample data that mimics the expected final database structure or schema.
+  - A draft machine learning module is connected to the provisional database.
