@@ -1,11 +1,11 @@
-# Final Project (Anton, Sharon, Lina, Elyse, Amanda)
+# Final Project (Anton, Sharon, Lina, Elise, Amanda)
 
 
-## **Presentation Section of Rubric for Week 1 of Group Work:**
+## **Modeling and Forecasting Income Inequality in the United States**
 
-### 1.  We selected Census data that looks at whether participants earn less than or more than $50,000 per year.  
+### 1.  We've selected Census data that looks at whether participants earn less or more than $50,000 per year.  
 
-### 2.  We selected this topic because, although the Census delays its publication of the adult dataset to protect the privacy of the respondents, we would like to eventually compare the 1994 publication to the present-day, even in the absence of a more current comparison dataset.  In the United States, an income of $50,000 in the year 1994 is equivalent to approximately $100,000 today.  A common topic that is spoken about is the income disparity between the rich and the poor, so this topic is of interest to us to see if any of the variables collected on this survey relate to income level, such as age or marital status.  A variable not collected directly by this survey is “inherited wealth;” however, it does collect the variable “capital gain,” which could be a potential proxy.
+### 2.  Although the Census delays its publication of the adult dataset to protect the privacy of the respondents, we are interested in comparing the 1994 publication to that of the present-day, even in the absence of a more current comparison dataset.  In the United States, an income of $50,000 in the year 1994 is equivalent to approximately $100,000 today.  A much debated topic that is spoken about is the annual income disparity between the rich and the poor. So this topic is of interest to us to see how and if any of the variables, such as age and marital status, collected on this survey impact income levels.  A variable not collected directly by this survey is “inherited wealth;” however, it does collect the variable “capital gain,” which could be a potential proxy.
 
 ### 3.  The dataset is derived from the Census.gov 1994 Adult Dataset, and it is described column by column here:  
 - **Column A = the participant ID number.**
@@ -30,39 +30,75 @@
 Possible Hypotheses:
 1. Higher age will be likely to yield higher income level over $50K.
 2. Country is expected to yield higher incomes in 1st world and capitalist countries.
-3. Education Level is expected to yield the lowest results at the lower end (high school or less).  We would expect the Master’s degree holders to earn the most, followed by the Bachelor’s degree.  The Associates may or may not hit the threshold of $50K.  The AA degree may be a border zone of where $50K begins for some people.
+3. Education Level is expected to yield the lowest results at the extremes (high school or less, and doctorate).  With doctorates, many students are earning poverty level wages by working for professors, or they major in something esoteric that does not connect to the labor force.  We would expect the Master’s degree holders to earn the most, followed by the Bachelor’s degree.  The Associates may or may not hit the threshold of $50K.  The AA degree may be a border zone of where $50K begins for some people.
 4. Gender may be related in non-U.S. countries where the mother is more expected to stay home with children and/or work part-time.
 5.  Executive/professional work would likely yield higher income than clerical or service industry occupations.
 6.  Race may not be relevant as of the date of this dataset, especially in countries where the nationality is homogenous.
 7.  Families with children may have lower income attainment.  Single people may be more career-oriented and earn higher incomes.
 
-### Other Questions Discussed:
-- **Perhaps we should focus solely on the 40-hour participants.**
-- Can we meaningfully combine federal, state and local government into a public sector category?
-- Can we meaningfully combine educational attainment into less than high school, high school, and Bachelor’s and graduate school?
-- Does capital gains represent a proxy for social class, or does it not matter to the regression equation?
-- What are the fewest amount of variables we can use to still have high accuracy? 
-
-## Communication Methods:
-Aside from communication on Slack, our Zoom Meeting Schedule (in addition to Monday- Wednesday class time) will be:
+### **Communication methods**
+[Join Fab 5 Zoom Meeting:](https://us06web.zoom.us/j/83959708254?pwd=dnRsbVRST05pVjhVVWduNVVWVDU1UT09)
+Aside from communication on Slack, our Zoom Meeting Schedule (in addition to Monday & Wednesday class time) will be:
 - Fridays at 7:00 PM
 - Sundays at 12:00 PM
-- (The paid version of Zoom will allow us to have multiple presenters if multiple people need to share. Zoom will also have whiteboards if needed.)
 
-### Division of Labor:
-- Lina & Sharon = Database.
-- Anton & Amanda = Machine Learning/Regression.
-- (Amanda= Report-writer for Segment 1; Zoom Coordinator; mapped out data columns for Segment 1; will focus more on machine learning/regression in future segments.  Anton did the supervised machine learning in Segment 1).
-- Elise – Visualization; Miscellaneous.
+### **Division of Labor**
+- Lina & Sharon = Database
+- Anton & Amanda = Machine Learning/Regression
+(Amanda= Report-writer for Segment 1; Zoom Coordinator; mapped out data columns for Segment 1; will focus more on machine learning/regression in future segments. Anton did the SML in Segment 1)
+- Elise – Presentation & Dashboard
 
-### **Individual Branches**
-- We have at least one branch for each team member.
-- Each team member has at least four commits from the duration of the first segment on either their own branch or the main branch, and/or via Slack.
+### **Machine Learning Model**
+Team members present a provisional machine learning model with code and accomplishes the following: 
 
-## **Machine Learning Model**
-- We present here a provisional machine learning model that stands in for the final machine learning model that takes in data in from the provisional database and outputs labels for input data.
+✓ Takes in data in from the provisional database 
 
-## **Database**
-- We present here a provisional database that stands in for the final database and contains: 
-  - Sample data that mimics the expected final database structure or schema.
-  - A draft machine learning module is connected to the provisional database.
+✓ Outputs label(s) for input data
+
+✓ Description of preliminary data preprocessing 
+
+✓ Description of preliminary feature engineering and preliminary feature selection, including their decision-making process 
+
+✓ Description of how data was split into training and testing sets 
+
+✓ Explanation of model choice, including limitations and benefits
+
+Questions to think about...
+- How does it work?
+- Why this specific model?
+- What is the model's accuracy? (capture an interpretation of how accurate, precise, or sensitive the model is)
+- If there are statistics involved, what stats are being included in analysis and why?
+- If no statistics are involved, what would you include if you had more time?
+
+### **Database**
+Team members present a provisional --> fully integrated database that stands in for the final database and accomplishes the following: 
+
+✓ Sample data that mimics the expected final database structure or schema 
+
+✓ Draft machine learning module is connected to the provisional database
+
+✓ Database stores static data for use during the project 
+
+✓ Database interfaces with the project in some format (e.g., scraping updates the database, or database connects to the model) 
+
+✓ Includes at least two tables (or collections, if using MongoDB) 
+
+✓ Includes at least one join using the database language (not including any joins in Pandas) 
+
+✓ Includes at least one connection string (using SQLAlchemy or PyMongo)
+Note: If you use a SQL database, you must provide your ERD with relationships.
+
+### **Presentation & Dashboard**
+
+[FAB5 Presentation Slides](https://docs.google.com/presentation/d/1eKOsacdlemOc44aoOOdj5vFGXsFLmb5p/edit?usp=sharing&ouid=113563215958551190830&rtpof=true&sd=true)
+
+✓ Generating at least three images to use in the presentation and with the dashboard
+(need to be neat and clean, but they also need to clearly add weight to the data story being told)
+
+✓ A good way to increase the quality of your images is to incorporate a visualization library, such as Seaborn if you're using Python, to make high-quality PNGs that can be reused as needed.
+
+✓ Description of the tool(s) that will be used to create final dashboard 
+
+✓ Description of interactive element(s) 
+- Creating maps using GeoJSON, this is a great time to make sure some fancy things are included, such as layers and filters
+- Or an interactive chart that can be filtered or has adjustable zoom can lend great strength to analysis.
