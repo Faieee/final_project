@@ -67,7 +67,75 @@ We felt most confident using SciKitLearn to run classifications and clustering a
 
 ✓ Description of how data was split into training and testing sets 
 
-We also trained the data by using naive random oversampling, smote oversampling, ClusterCentroids resampler, SMOTEENN, EasyEnsembleClassifier, BalancedRandomForestClassifier.
+We also trained the data by using naive random oversampling, smote oversampling, ClusterCentroids resampler, SMOTEEN, EasyEnsembleClassifier, BalancedRandomForestClassifier.
+
+**naive random oversampling**
+
+![NaiveRandomOversampling](https://user-images.githubusercontent.com/68654746/198139966-1130bf4a-108b-495b-b213-57944ea27536.jpg)
+
+Balanced Accuracy: 0.7384790685541558 or 73.85%
+
+Precision: The precision is high of 91% for 
+
+Recall: 
+
+**SMOTE oversampling**
+
+![SMOTE](https://user-images.githubusercontent.com/68654746/198140668-064d4645-65d2-4fb4-8eab-7524afbdc70d.jpg)
+
+Balanced Accuracy: 0.7406228479555395 or 74.06%
+
+Precision: 
+
+Recall:
+
+**ClusterCentroids undersampling**
+
+![ClusterCentroids](https://user-images.githubusercontent.com/68654746/198141085-42a4743c-08cd-4d09-ae27-78b1ff2adf9d.jpg)
+
+Balanced Accuracy: 0.7369091820621197 or 73.69%
+
+Precision: 
+
+Recall:
+
+**SMOTEEN**
+
+![SMOTEEN](https://user-images.githubusercontent.com/68654746/198141390-3f5227a5-8b31-4afa-ab66-547189405faa.jpg)
+
+Balanced Accuracy: 0.7369091820621197 or 73.69%
+
+Precision: 
+
+Recall:
+
+**EasyEnsembleClassifier**
+
+![EasyEnsembleClassifier](https://user-images.githubusercontent.com/68654746/198141709-fd8e09d7-61cb-4896-b484-5775fcc93d4d.jpg)
+
+Balanced Accuracy: 0.8050432225910351 or 80.50%
+
+Precision: 
+
+Recall:
+
+**BalancedRandomForestClassifier**
+
+![BalancedRandomForest](https://user-images.githubusercontent.com/68654746/198142393-15e38a7b-650f-456d-adbb-b5c3cdb78a25.jpg)
+
+Balanced Accuracy: 0.7893344741273003 or 78.93%
+
+Precision: 
+
+Recall:
+
+**Summary of models by feature importance in descending order**
+
+![FeatureImportance](https://user-images.githubusercontent.com/68654746/198142756-45b8eac4-3b7f-403d-8140-f9aa926fbf5d.jpg)
+
+**Confustion Matrix Summary Table**
+
+![ConfusionSummary](https://user-images.githubusercontent.com/68654746/198142955-c1ef3571-0c0a-4daa-9201-f18cd82f4dec.jpg)
 
 ✓ Explanation of model choice, including limitations and benefits
 
