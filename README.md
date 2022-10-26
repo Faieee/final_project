@@ -57,9 +57,17 @@ Team members present a provisional machine learning model with code and accompli
 
 ✓ Description of preliminary data preprocessing 
 
+Initially we performed a preliminary exploration of the Census dataset in Jupyter Notebook and PostgresSQL. We extracted some tables and statistical findings, but felt we needed to drop several columns to be able to develop better visualizations and statistical findings, so we created adult_c2.data, adult_c2.names, and census_data_education csv. Further analysis and visualizations were completed using Python libraries and VBA.
+
 ✓ Description of preliminary feature engineering and preliminary feature selection, including their decision-making process 
 
+We merged PostgresSQL and our Jupyter Notebooks in order to extrapulate and form the tables we were interested in analyzing. Using PostgresSQL, we created a schema and uploaded the census_data.csv, and after exploratory data analysis created census_data_EDA.ipynb and census_data_EDA_rev2.ipynb. In another schema, we uploaded adult_c2.data.csv and wanted to look specifically at adult education level and capital gain. We are still working on this notebook under data_c2.ipynb. We may integrate Flask to display the data.
+
+We felt most confident using SciKitLearn to run classifications and clustering algorithms. We found that using balanced random forest produced the best results. 
+
 ✓ Description of how data was split into training and testing sets 
+
+We also trained the data by using naive random oversampling, smote oversampling, ClusterCentroids resampler, SMOTEENN, EasyEnsembleClassifier, BalancedRandomForestClassifier.
 
 ✓ Explanation of model choice, including limitations and benefits
 
@@ -87,18 +95,24 @@ Team members present a provisional --> fully integrated database that stands in 
 
 ✓ Includes at least one connection string (using SQLAlchemy or PyMongo)
 Note: If you use a SQL database, you must provide your ERD with relationships.
+![ERD](https://user-images.githubusercontent.com/68654746/198128833-fa8b5b84-8ecf-42bc-be22-001d48d79c11.png)
 
 ### **Presentation & Dashboard**
 
 [FAB5 Presentation Slides](https://docs.google.com/presentation/d/1eKOsacdlemOc44aoOOdj5vFGXsFLmb5p/edit?usp=sharing&ouid=113563215958551190830&rtpof=true&sd=true)
 
-✓ Generating at least three images to use in the presentation and with the dashboard
-(need to be neat and clean, but they also need to clearly add weight to the data story being told)
+✓ Generating at least three images to use in the presentation and with the dashboard (need to be neat and clean, but they also need to clearly add weight to the data story being told). A good way to increase the quality of your images is to incorporate a visualization library, such as Seaborn if you're using Python, to make high-quality PNGs that can be reused as needed.
 
-✓ A good way to increase the quality of your images is to incorporate a visualization library, such as Seaborn if you're using Python, to make high-quality PNGs that can be reused as needed.
+![image (2)](https://user-images.githubusercontent.com/68654746/198133648-ca563792-bb06-4cc5-b2d7-e004470254ef.png)
+![image (3)](https://user-images.githubusercontent.com/68654746/198133670-6c39e672-a49c-47a1-a48a-fae35c1d9b52.png)
+![image (4)](https://user-images.githubusercontent.com/68654746/198133687-6e540007-9498-44e6-a5ad-e3943bfd3dca.png)
+![image (5)](https://user-images.githubusercontent.com/68654746/198133705-af4e9333-d8fd-432d-8d5f-c962b369b1b4.png)
+![image (6)](https://user-images.githubusercontent.com/68654746/198133734-e14adb93-8f7a-4ba9-9791-d53ab9e7ee34.png)
 
 ✓ Description of the tool(s) that will be used to create final dashboard 
+We are using Tableau to create our final dashboard.
+
+https://public.tableau.com/authoring/CensusProject_16668143596540/Sheet1#1
 
 ✓ Description of interactive element(s) 
-- Creating maps using GeoJSON, this is a great time to make sure some fancy things are included, such as layers and filters
-- Or an interactive chart that can be filtered or has adjustable zoom can lend great strength to analysis.
+Within Tableau, we used the filter, highlight, and actions to create tables and charts similar to ones we've produced in Jupyter Notebook and SQL. We also wanted to incorporate the inflation rate website in our analysis so the URL action allowed us to display it in Tableau. One interactive chart we're interested in is hours worked per week. 
