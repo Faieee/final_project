@@ -36,12 +36,6 @@ Possible Hypotheses:
 6.  Race may not be relevant as of the date of this dataset, especially in countries where the nationality is homogenous.
 7.  Families with children may have lower income attainment.  Single people may be more career-oriented and earn higher incomes.
 
-### **Communication methods**
-[Join Fab 5 Zoom Meeting:](https://us06web.zoom.us/j/83959708254?pwd=dnRsbVRST05pVjhVVWduNVVWVDU1UT09)
-Aside from communication on Slack, our Zoom Meeting Schedule (in addition to Monday & Wednesday class time) will be:
-- Fridays at 7:00 PM
-- Sundays at 12:00 PM
-
 ### **Division of Labor**
 - Lina & Sharon = Database
 - Anton & Amanda = Machine Learning/Regression
@@ -63,7 +57,7 @@ Initially we performed a preliminary exploration of the Census dataset in Jupyte
 
 We merged PostgresSQL and our Jupyter Notebooks in order to extrapulate and form the tables we were interested in analyzing. Using PostgresSQL, we created a schema and uploaded the census_data.csv, and after exploratory data analysis created census_data_EDA.ipynb and census_data_EDA_rev2.ipynb. In another schema, we uploaded adult_c2.data.csv and wanted to look specifically at adult education level and capital gain. We are still working on this notebook under data_c2.ipynb. We may integrate Flask to display the data.
 
-We felt most confident using SciKitLearn to run classifications and clustering algorithms. We found that using balanced random forest produced the best results. 
+We felt most confident using SciKitLearn to run classifications and clustering algorithms.
 
 ✓ Description of how data was split into training and testing sets 
 
@@ -75,9 +69,9 @@ We also trained the data by using naive random oversampling, smote oversampling,
 
 Balanced Accuracy: 0.7384790685541558 or 73.85%
 
-Precision: The precision is high of 91% for 
+Precision: 91% for <$50k outcomes
 
-Recall: 
+Recall: 71% of <$50k outcomes were found
 
 **SMOTE oversampling**
 
@@ -85,9 +79,9 @@ Recall:
 
 Balanced Accuracy: 0.7406228479555395 or 74.06%
 
-Precision: 
+Precision: 92% for <$50k outcomes
 
-Recall:
+Recall: 70% of <$50k outcomes were found
 
 **ClusterCentroids undersampling**
 
@@ -95,9 +89,9 @@ Recall:
 
 Balanced Accuracy: 0.7369091820621197 or 73.69%
 
-Precision: 
+Precision: 92% for <$50k outcomes
 
-Recall:
+Recall: 66% of <$50k outcomes were found
 
 **SMOTEEN**
 
@@ -105,9 +99,9 @@ Recall:
 
 Balanced Accuracy: 0.7369091820621197 or 73.69%
 
-Precision: 
+Precision: 90% for <$50k outcomes
 
-Recall:
+Recall: 76% of <$50k outcomes were found
 
 **EasyEnsembleClassifier**
 
@@ -115,9 +109,9 @@ Recall:
 
 Balanced Accuracy: 0.8050432225910351 or 80.50%
 
-Precision: 
+Precision: 94% for <$50k outcomes
 
-Recall:
+Recall: 76% of <$50k outcomes were found
 
 **BalancedRandomForestClassifier**
 
@@ -125,9 +119,9 @@ Recall:
 
 Balanced Accuracy: 0.7893344741273003 or 78.93%
 
-Precision: 
+Precision: 94% for <$50k outcomes
 
-Recall:
+Recall: 75% of <$50k outcomes were found
 
 **Summary of models by feature importance in descending order**
 
