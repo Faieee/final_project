@@ -75,9 +75,9 @@ We also trained the data by using naive random oversampling, smote oversampling,
 
 Balanced Accuracy: 0.7384790685541558 or 73.85%
 
-Precision: The precision is high of 91% for 
+Precision: 91% for <$50k outcomes
 
-Recall: 
+Recall: 71% of <$50k outcomes were found
 
 **SMOTE oversampling**
 
@@ -85,9 +85,9 @@ Recall:
 
 Balanced Accuracy: 0.7406228479555395 or 74.06%
 
-Precision: 
+Precision: 92% for <$50k outcomes
 
-Recall:
+Recall: 70% of <$50k outcomes were found
 
 **ClusterCentroids undersampling**
 
@@ -95,9 +95,9 @@ Recall:
 
 Balanced Accuracy: 0.7369091820621197 or 73.69%
 
-Precision: 
+Precision: 92% for <$50k outcomes
 
-Recall:
+Recall: 66% of <$50k outcomes were found
 
 **SMOTEEN**
 
@@ -105,9 +105,9 @@ Recall:
 
 Balanced Accuracy: 0.7369091820621197 or 73.69%
 
-Precision: 
+Precision: 90% for <$50k outcomes
 
-Recall:
+Recall: 76% of <$50k outcomes were found
 
 **EasyEnsembleClassifier**
 
@@ -115,9 +115,9 @@ Recall:
 
 Balanced Accuracy: 0.8050432225910351 or 80.50%
 
-Precision: 
+Precision: 94% for <$50k outcomes
 
-Recall:
+Recall: 76% of <$50k outcomes were found
 
 **BalancedRandomForestClassifier**
 
@@ -125,9 +125,9 @@ Recall:
 
 Balanced Accuracy: 0.7893344741273003 or 78.93%
 
-Precision: 
+Precision: 94% for <$50k outcomes
 
-Recall:
+Recall: 75% of <$50k outcomes were found
 
 **Summary of models by feature importance in descending order**
 
