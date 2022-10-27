@@ -61,7 +61,7 @@ We felt most confident using SciKitLearn to run classifications and clustering a
 
 ✓ Description of how data was split into training and testing sets 
 
-We also trained the data by using naive random oversampling, smote oversampling, ClusterCentroids resampler, SMOTEEN, EasyEnsembleClassifier, BalancedRandomForestClassifier.
+We also trained the census education data by using naive random oversampling, smote oversampling, ClusterCentroids resampler, SMOTEEN, EasyEnsembleClassifier, BalancedRandomForestClassifier.
 
 **naive random oversampling**
 
@@ -133,6 +133,8 @@ Recall: 75% of <$50k outcomes were found
 
 ✓ Explanation of model choice, including limitations and benefits
 
+After reviewing all six models, the EasyEnsembleClassifer model yields the best results with the highest balanced accuracy rate of 80.50%. However, it may be important to consider that the cleaned census education dataset may skew the results. Additionally, adults who received education in their native countries outside of the U.S. would likely have different standarads. Thus, people from different backgrounds make it difficult to have comparable standards. 
+
 Questions to think about...
 - How does it work?
 - Why this specific model?
@@ -146,6 +148,8 @@ Team members present a provisional --> fully integrated database that stands in 
 ✓ Sample data that mimics the expected final database structure or schema 
 
 ✓ Draft machine learning module is connected to the provisional database
+
+([Link to SQL database}https://github.com/Faieee/final_project/blob/main/QuickDBD_schema.sql)
 
 ✓ Database stores static data for use during the project 
 
