@@ -190,9 +190,8 @@ Note: If you use a SQL database, you must provide your ERD with relationships.
 ![image (6)](https://user-images.githubusercontent.com/68654746/198133734-e14adb93-8f7a-4ba9-9791-d53ab9e7ee34.png)
 
 ✓ Description of the tool(s) that will be used to create final dashboard 
-We are using Tableau to create our final dashboard.
-
-https://public.tableau.com/authoring/CensusProject_16668143596540/Sheet1#1
+We are using Tableau to create our final dashboard:
+https://public.tableau.com/app/profile/amanda8204/viz/FinalProject_16668222456730/Dashboard1
 
 ✓ Description of interactive element(s) 
 Within Tableau, we used the filter, highlight, and actions to create tables and charts similar to ones we've produced in Jupyter Notebook and SQL. We also wanted to incorporate the inflation rate website in our analysis so the URL action allowed us to display it in Tableau. One interactive chart we're interested in is hours worked per week. 
