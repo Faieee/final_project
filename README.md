@@ -133,7 +133,7 @@ Recall: 75% of <$50k outcomes were found
 
 ✓ Explanation of model choice, including limitations and benefits
 
-After reviewing all six models, the EasyEnsembleClassifer model yields the best results with the highest balanced accuracy rate of 80.50%. However, it may be important to consider that the cleaned census education dataset may skew the results. Additionally, adults who received education in their native countries outside of the U.S. would likely have different standarads. Thus, people from different backgrounds make it difficult to have comparable standards. 
+After reviewing all six models, the EasyEnsembleClassifer model yields the best results with the highest balanced accuracy rate of 80.50%. However, it may be important to consider that the cleaned census education dataset may skew the results. Additionally, adults who received education in their native countries outside of the U.S. would likely have different standards. Thus, people from different backgrounds make it difficult to have comparable standards. 
 
 Questions to think about...
 - How does it work?
