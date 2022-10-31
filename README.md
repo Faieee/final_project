@@ -1,13 +1,15 @@
-# Final Project (Anton, Sharon, Lina, Elise, Amanda)
+# Final Project ~ presented by Anton, Amanda, Lina, Sharon, Lina, Elise
+![avatar](https://user-images.githubusercontent.com/68654746/199106232-576cfbc0-38c3-4e6d-ac0b-31c94a9241f7.jpg)
 
+## Modeling and Forecasting Income Inequality in the United States
 
-## **Modeling and Forecasting Income Inequality in the United States**
+### Topic & Data Source
+We've selected a dataset derived from the Census.gov 1994 Adult Dataset that looks at whether participants earn less or more than $50,000 per year. We found it on UCI Machine Learning Repository:
+https://archive.ics.uci.edu/ml/datasets/census+income 
 
-### 1.  We've selected Census data that looks at whether participants earn less or more than $50,000 per year.  
+Although the Census delays its publication of the adult dataset to protect the privacy of the respondents, we are interested in comparing the 1994 publication to that of the present-day, even in the absence of a more current comparison dataset.  In the U.S., an income of $50,000 in the year 1994 is equivalent to approximately $100,000 today. The annual income disparity between the rich and the poor is a hot debated topic not only in the political arena, but also in communities and households. So we are curious to see how and if any of the variables collected in this survey impact income levels. Then, taking it one step further, can we see a trend that can be measured and can be used to practice machine learning problems like classification.  One limitation of this survey we noticed right away was the lack of a variable for "inherited wealth." However, the survey does collect the variable “capital gain,” which could be a potential proxy.
 
-### 2.  Although the Census delays its publication of the adult dataset to protect the privacy of the respondents, we are interested in comparing the 1994 publication to that of the present-day, even in the absence of a more current comparison dataset.  In the United States, an income of $50,000 in the year 1994 is equivalent to approximately $100,000 today.  A much debated topic that is spoken about is the annual income disparity between the rich and the poor. So this topic is of interest to us to see how and if any of the variables, such as age and marital status, collected on this survey impact income levels.  A variable not collected directly by this survey is “inherited wealth;” however, it does collect the variable “capital gain,” which could be a potential proxy.
-
-### 3.  The dataset is derived from the Census.gov 1994 Adult Dataset, and it is described column by column here:  
+**List of columns from the 1994 Census dataset:** 
 - **Column A = the participant ID number.**
 - **Column B =  age:** the respondent’s age as an integer;
 - **Column C = workclass:** Pertains to their sector of employment or independent contractor status (Private, Self-emp-not-inc, Self-emp-inc, Federal-gov, Local-gov, State-gov, Without-pay, Never-worked).
@@ -25,43 +27,60 @@
 - **Column O = native_country:** This is the respondent’s country of origin.  The Census made some spelling errors which we are keeping until they can be cleaned.  For example, Hong should say Hong-Kong, Trinadad should say Trinidad, Holand should say Holland, and Columbia should say Colombia.  In addition, we do not know what South means.  South could mean either South Korea or South Africa.  We do not have reason to think it means South Sudan because it is 1994 data.  For now, these categories include: Cambodia, Canada, China, Columbia, Cuba, Dominican-Republic, Ecuador, El-Salvador, England, France, Germany, Greece, Guatemala, Haiti, Holand-Netherlands, Honduras, Hong, Hungary, India, Iran, Ireland, Italy, Jamaica, Japan, Laos, Mexico, Nicaragua, Outlying-US(Guam-USVI-etc), Philippines, Poland, Portugal, Puerto-Rico, Scotland, South, Taiwan, Thailand, Trinadad&Tobago, Peru, United-States, Vietnam, and Yugoslavia. 
 - **Column P = income:** This represents whether the respondent earns more or less than $50,000 annually, using logic: <= 50K, or  >50K.
 
-### 4.  We hope to answer the questions of which variables lead to higher income level, and is 1994 comparable to today?  Regarding machine learning modeling, we must focus on the United States data rather than the world data because there will not be enough datapoints to include the other countries.  We would be looking at the U.S. data for the machine learning component, but we may be looking at the world data for the database component.
+### Questions
+We hope to answer the questions of which variables lead to higher income level, and is 1994 comparable to today?  Regarding machine learning modeling, we must focus on the United States data rather than the world data because there will not be enough datapoints to include the other countries.  We would be looking at the U.S. data for the machine learning component, but we may be looking at the world data for the database component.
 
-Possible Hypotheses:
+**Possible Hypotheses:**
 1. Higher age will be likely to yield higher income level over $50K.
 2. Country is expected to yield higher incomes in 1st world and capitalist countries.
+
 3. Education Level is expected to yield the lowest results at the extremes (high school or less, and doctorate).  With doctorates, many students are earning poverty level wages by working for professors, or they major in something esoteric that does not connect to the labor force.  We would expect the Master’s degree holders to earn the most, followed by the Bachelor’s degree.  The Associates may or may not hit the threshold of $50K.  The AA degree may be a border zone of where $50K begins for some people.
+
+![edu](https://user-images.githubusercontent.com/68654746/198147358-63467d2c-804e-4cb9-a200-0aeeb12a480e.jpg)
+![image (3)](https://user-images.githubusercontent.com/68654746/198133670-6c39e672-a49c-47a1-a48a-fae35c1d9b52.png)
+
 4. Gender may be related in non-U.S. countries where the mother is more expected to stay home with children and/or work part-time.
+
+![sex](https://user-images.githubusercontent.com/68654746/198148017-d793c45f-306d-41a4-9923-409c5be9b3d8.jpg)
+
 5.  Executive/professional work would likely yield higher income than clerical or service industry occupations.
+![occupation](https://user-images.githubusercontent.com/68654746/198147513-793ea0b6-4d85-4253-8cae-c6946e5548d2.jpg)
+
 6.  Race may not be relevant as of the date of this dataset, especially in countries where the nationality is homogenous.
+![race](https://user-images.githubusercontent.com/68654746/198147978-ac58caf2-f2aa-4c3d-89a2-058b3310af41.jpg)
+
 7.  Families with children may have lower income attainment.  Single people may be more career-oriented and earn higher incomes.
+![martialStatus](https://user-images.githubusercontent.com/68654746/198147503-e3e72ba6-2a25-497b-8ded-8de27fd223ba.jpg)
+![image (5)](https://user-images.githubusercontent.com/68654746/198133705-af4e9333-d8fd-432d-8d5f-c962b369b1b4.png)
 
-### **Division of Labor**
-- Lina & Sharon = Database
-- Anton & Amanda = Machine Learning/Regression
-(Amanda= Report-writer for Segment 1; Zoom Coordinator; mapped out data columns for Segment 1; will focus more on machine learning/regression in future segments. Anton did the SML in Segment 1)
-- Elise – Presentation & Dashboard
+### Preliminary data preprocessing
+Our first step was loading the data in Jupyter Notebook and perform a preliminary exploration of the Census dataset. Dropping a few columns first, we wanted to focus on age, final weight, education (in numerical form), capital gain and loss, and hours per week worked. Below is a table summarizing the data descriptive statistic:
+![census_description](https://user-images.githubusercontent.com/68654746/198146984-9a471231-4242-41b2-b3b6-41b25485f523.jpg)
 
-### **Machine Learning Model**
-Team members present a provisional machine learning model with code and accomplishes the following: 
+We then pulled unique values and examined if there were any duplicate values in each of the columns of the dataset. Once we cleaned our data, we extracted some preliminary tables, but found that we still needed to drop several more columns and values in order to be able to develop better visualizations and statistical findings. That led us to created cleaned adult_c2.data, adult_c2.names, and census_data_education csv. Further analysis and visualizations were completed using Python libraries and VBA. We also formed a connection string with SQLAlchemy and created a schema in PostgreSQL. Below is our ERD diagram with relationships:
 
-✓ Takes in data in from the provisional database 
+![ERD](https://user-images.githubusercontent.com/68654746/199123519-214ec72d-2913-477e-8102-7e0dd8b358ce.png)
 
-✓ Outputs label(s) for input data
+### Database
+[Link to SQL database](https://github.com/Faieee/final_project/blob/main/QuickDBD_schema.sql) 
 
-✓ Description of preliminary data preprocessing 
+![workclass](https://user-images.githubusercontent.com/68654746/198147245-5c5da75e-102f-4bd1-9fe1-8a54da7aeee4.jpg)
 
-Initially we performed a preliminary exploration of the Census dataset in Jupyter Notebook and PostgresSQL. We extracted some tables and statistical findings, but felt we needed to drop several columns to be able to develop better visualizations and statistical findings, so we created adult_c2.data, adult_c2.names, and census_data_education csv. Further analysis and visualizations were completed using Python libraries and VBA.
+![relationship](https://user-images.githubusercontent.com/68654746/198147622-6482ade6-3172-4f52-b260-f854a51b48b3.jpg)
+![correlation](https://user-images.githubusercontent.com/68654746/198148402-3a81615b-e439-44b6-8ab4-6841a715b374.jpg)
+![correllation_seaborn](https://user-images.githubusercontent.com/68654746/198148454-676a70e3-cadb-49c7-b08b-60c5c387ebd7.jpg)
+
+### Machine Learning Model 
 
 ✓ Description of preliminary feature engineering and preliminary feature selection, including their decision-making process 
 
 We merged PostgresSQL and our Jupyter Notebooks in order to extrapulate and form the tables we were interested in analyzing. Using PostgresSQL, we created a schema and uploaded the census_data.csv, and after exploratory data analysis created census_data_EDA.ipynb and census_data_EDA_rev2.ipynb. In another schema, we uploaded adult_c2.data.csv and wanted to look specifically at adult education level and capital gain. We are still working on this notebook under data_c2.ipynb. We may integrate Flask to display the data.
 
-We felt most confident using SciKitLearn to run classifications and clustering algorithms.
+We felt most confident using SciKitLearn to run classifications and clustering algorithms. We found that using balanced random forest produced the best results. 
 
 ✓ Description of how data was split into training and testing sets 
 
-We also trained the census education data by using naive random oversampling, smote oversampling, ClusterCentroids resampler, SMOTEEN, EasyEnsembleClassifier, BalancedRandomForestClassifier.
+We also trained the data by using naive random oversampling, smote oversampling, ClusterCentroids resampler, SMOTEEN, EasyEnsembleClassifier, BalancedRandomForestClassifier.
 
 **naive random oversampling**
 
@@ -119,7 +138,7 @@ Recall: 76% of <$50k outcomes were found
 
 Balanced Accuracy: 0.7893344741273003 or 78.93%
 
-Precision: 94% for <$50k outcomes
+Precision:  94% for <$50k outcomes
 
 Recall: 75% of <$50k outcomes were found
 
@@ -133,7 +152,7 @@ Recall: 75% of <$50k outcomes were found
 
 ✓ Explanation of model choice, including limitations and benefits
 
-After reviewing all six models, the EasyEnsembleClassifer model yields the best results with the highest balanced accuracy rate of 80.50%. However, it may be important to consider that the cleaned census education dataset may skew the results. Additionally, adults who received education in their native countries outside of the U.S. would likely have different standards. Thus, people from different backgrounds make it difficult to have comparable standards. 
+After reviewing all six models, the EasyEnsembleClassifer model yields the best results with the highest balanced accuracy rate of 80.50%. However, it may be important to consider that the cleaned census education dataset may skew the results. Additionally, adults who received education in their native countries outside of the U.S. would likely have different standards. Thus, people from different backgrounds make it difficult to have comparable standards.
 
 Questions to think about...
 - How does it work?
@@ -142,54 +161,12 @@ Questions to think about...
 - If there are statistics involved, what stats are being included in analysis and why?
 - If no statistics are involved, what would you include if you had more time?
 
-### **Database**
-Team members present a provisional --> fully integrated database that stands in for the final database and accomplishes the following: 
+### Presentation & Dashboard
 
-✓ Sample data that mimics the expected final database structure or schema 
+[Link to FAB5's Google Presentation Slides](https://docs.google.com/presentation/d/1eKOsacdlemOc44aoOOdj5vFGXsFLmb5p/edit?usp=sharing&ouid=113563215958551190830&rtpof=true&sd=true)
 
-✓ Draft machine learning module is connected to the provisional database
+For our final dashboard, we are using Tableau and HTML:
 
-([Link to SQL database}https://github.com/Faieee/final_project/blob/main/QuickDBD_schema.sql)
+[Link to Fab5's Tableau Dashboard](https://public.tableau.com/authoring/CensusProject_16668143596540/Sheet1#1)
 
-✓ Database stores static data for use during the project 
-
-✓ Database interfaces with the project in some format (e.g., scraping updates the database, or database connects to the model) 
-
-✓ Includes at least two tables (or collections, if using MongoDB) 
-
-![census_description](https://user-images.githubusercontent.com/68654746/198146984-9a471231-4242-41b2-b3b6-41b25485f523.jpg)
-![workclass](https://user-images.githubusercontent.com/68654746/198147245-5c5da75e-102f-4bd1-9fe1-8a54da7aeee4.jpg)
-![edu](https://user-images.githubusercontent.com/68654746/198147358-63467d2c-804e-4cb9-a200-0aeeb12a480e.jpg)
-![martialStatus](https://user-images.githubusercontent.com/68654746/198147503-e3e72ba6-2a25-497b-8ded-8de27fd223ba.jpg)
-![occupation](https://user-images.githubusercontent.com/68654746/198147513-793ea0b6-4d85-4253-8cae-c6946e5548d2.jpg)
-![relationship](https://user-images.githubusercontent.com/68654746/198147622-6482ade6-3172-4f52-b260-f854a51b48b3.jpg)
-![race](https://user-images.githubusercontent.com/68654746/198147978-ac58caf2-f2aa-4c3d-89a2-058b3310af41.jpg)
-![sex](https://user-images.githubusercontent.com/68654746/198148017-d793c45f-306d-41a4-9923-409c5be9b3d8.jpg)
-![correlation](https://user-images.githubusercontent.com/68654746/198148402-3a81615b-e439-44b6-8ab4-6841a715b374.jpg)
-![correllation_seaborn](https://user-images.githubusercontent.com/68654746/198148454-676a70e3-cadb-49c7-b08b-60c5c387ebd7.jpg)
-
-
-✓ Includes at least one join using the database language (not including any joins in Pandas) 
-
-✓ Includes at least one connection string (using SQLAlchemy or PyMongo)
-Note: If you use a SQL database, you must provide your ERD with relationships.
-![ERD](https://user-images.githubusercontent.com/68654746/198128833-fa8b5b84-8ecf-42bc-be22-001d48d79c11.png)
-
-### **Presentation & Dashboard**
-
-[FAB5 Presentation Slides](https://docs.google.com/presentation/d/1eKOsacdlemOc44aoOOdj5vFGXsFLmb5p/edit?usp=sharing&ouid=113563215958551190830&rtpof=true&sd=true)
-
-✓ Generating at least three images to use in the presentation and with the dashboard (need to be neat and clean, but they also need to clearly add weight to the data story being told). A good way to increase the quality of your images is to incorporate a visualization library, such as Seaborn if you're using Python, to make high-quality PNGs that can be reused as needed.
-
-![image (2)](https://user-images.githubusercontent.com/68654746/198133648-ca563792-bb06-4cc5-b2d7-e004470254ef.png)
-![image (3)](https://user-images.githubusercontent.com/68654746/198133670-6c39e672-a49c-47a1-a48a-fae35c1d9b52.png)
-![image (4)](https://user-images.githubusercontent.com/68654746/198133687-6e540007-9498-44e6-a5ad-e3943bfd3dca.png)
-![image (5)](https://user-images.githubusercontent.com/68654746/198133705-af4e9333-d8fd-432d-8d5f-c962b369b1b4.png)
-![image (6)](https://user-images.githubusercontent.com/68654746/198133734-e14adb93-8f7a-4ba9-9791-d53ab9e7ee34.png)
-
-✓ Description of the tool(s) that will be used to create final dashboard 
-We are using Tableau to create our final dashboard:
-https://public.tableau.com/app/profile/amanda8204/viz/FinalProject_16668222456730/Dashboard1
-
-✓ Description of interactive element(s) 
 Within Tableau, we used the filter, highlight, and actions to create tables and charts similar to ones we've produced in Jupyter Notebook and SQL. We also wanted to incorporate the inflation rate website in our analysis so the URL action allowed us to display it in Tableau. One interactive chart we're interested in is hours worked per week. 
