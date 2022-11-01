@@ -32,6 +32,9 @@ We hope to answer the questions of which variables lead to higher income level, 
 
 **Possible Hypotheses:**
 1. Higher age will be likely to yield higher income level over $50K.
+
+![age_boxplot](https://user-images.githubusercontent.com/68654746/199134388-9dcec6d1-b5b2-418f-8d81-8e6374b94f8e.jpg)
+
 2. Country is expected to yield higher incomes in 1st world and capitalist countries.
 
 3. Education Level is expected to yield the lowest results at the extremes (high school or less, and doctorate).  With doctorates, many students are earning poverty level wages by working for professors, or they major in something esoteric that does not connect to the labor force.  We would expect the Master’s degree holders to earn the most, followed by the Bachelor’s degree.  The Associates may or may not hit the threshold of $50K.  The AA degree may be a border zone of where $50K begins for some people.
@@ -42,14 +45,18 @@ We hope to answer the questions of which variables lead to higher income level, 
 4. Gender may be related in non-U.S. countries where the mother is more expected to stay home with children and/or work part-time.
 
 ![sex](https://user-images.githubusercontent.com/68654746/198148017-d793c45f-306d-41a4-9923-409c5be9b3d8.jpg)
+![relationship](https://user-images.githubusercontent.com/68654746/198147622-6482ade6-3172-4f52-b260-f854a51b48b3.jpg)
 
 5.  Executive/professional work would likely yield higher income than clerical or service industry occupations.
 ![occupation](https://user-images.githubusercontent.com/68654746/198147513-793ea0b6-4d85-4253-8cae-c6946e5548d2.jpg)
+
+![workclass](https://user-images.githubusercontent.com/68654746/198147245-5c5da75e-102f-4bd1-9fe1-8a54da7aeee4.jpg)
 
 6.  Race may not be relevant as of the date of this dataset, especially in countries where the nationality is homogenous.
 ![race](https://user-images.githubusercontent.com/68654746/198147978-ac58caf2-f2aa-4c3d-89a2-058b3310af41.jpg)
 
 7.  Families with children may have lower income attainment.  Single people may be more career-oriented and earn higher incomes.
+
 ![martialStatus](https://user-images.githubusercontent.com/68654746/198147503-e3e72ba6-2a25-497b-8ded-8de27fd223ba.jpg)
 ![image (5)](https://user-images.githubusercontent.com/68654746/198133705-af4e9333-d8fd-432d-8d5f-c962b369b1b4.png)
 
@@ -64,9 +71,6 @@ We then pulled unique values and examined if there were any duplicate values in 
 ### Database
 [Link to SQL database](https://github.com/Faieee/final_project/blob/main/QuickDBD_schema.sql) 
 
-![workclass](https://user-images.githubusercontent.com/68654746/198147245-5c5da75e-102f-4bd1-9fe1-8a54da7aeee4.jpg)
-
-![relationship](https://user-images.githubusercontent.com/68654746/198147622-6482ade6-3172-4f52-b260-f854a51b48b3.jpg)
 ![correlation](https://user-images.githubusercontent.com/68654746/198148402-3a81615b-e439-44b6-8ab4-6841a715b374.jpg)
 ![correllation_seaborn](https://user-images.githubusercontent.com/68654746/198148454-676a70e3-cadb-49c7-b08b-60c5c387ebd7.jpg)
 
