@@ -171,7 +171,7 @@ Questions to think about...
 
 For our final dashboard, we are using Tableau and HTML:
 
-[Link to Fab5's Tableau Dashboard](https://public.tableau.com/authoring/CensusProject_16668143596540/Sheet1#1)
+[Link to Fab5's Tableau Dashboard](https://public.tableau.com/app/profile/amanda8204/viz/FinalProject_16668222456730/Dashboard1)
 
 [Link to Country comparision Tableau](https://public.tableau.com/app/profile/lina.valencia/viz/Income_Comparison_US_Dollars/IncomecomparisoninUSDollars?publish=yes)
 Within Tableau, we used the filter, highlight, and actions to create tables and charts similar to ones we've produced in Jupyter Notebook and SQL. We also wanted to incorporate the inflation rate website in our analysis so the URL action allowed us to display it in Tableau. One interactive chart we're interested in is hours worked per week. 
