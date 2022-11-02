@@ -4,7 +4,7 @@
 ## Modeling and Forecasting Income Inequality in the United States
 
 ### Topic & Data Source
-The dataset selected was derived from the Census.gov 1994 Adult Dataset, which looks at whether participants earn less or more than $50,000 per year. We found it on UCI Machine Learning Repository: 
+The dataset selected was derived from the Census.gov 1994 Adult Dataset, which looks at whether participants earn less or more than $50,000 per year. The dataset can be found on UCI Machine Learning Repository: 
 https://archive.ics.uci.edu/ml/datasets/census+income 
 
 Although the Census delays the publication of the adult dataset to protect the privacy of the respondents, we are interested in comparing the 1994 publication to the present day, even in the absence of a more current comparison dataset. In the U.S., an income of $50,000 in 1994 is equivalent to approximately $100,000 today, as described in https://www.in2013dollars.com/us/inflation/1994?amount=50000. The annual income disparity between the rich and the poor is a hotly debated topic in the political arena and communities and households. Consequently, we are curious to see how and if any of the variables collected in this survey impact income levels. Additionally, we would like to see if a trend can be measured and used to practice machine learning problems such as classification. One limitation of this survey we noticed right away was the lack of a variable for "inherited wealth." However, the survey does collect the variable "capital gain," which could be a potential proxy.
