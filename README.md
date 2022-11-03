@@ -93,13 +93,16 @@ We hope to answer the questions of which variables lead to higher income levels 
 ### Machine Learning Model 
 
 **Description of preliminary feature engineering and preliminary feature selection, including their decision-making process**
+- On the first iteration, we selected 'age', 'workclass', 'education_cat_lev', 'marital_status', 'occupation', 'relationship', 'race', 'sex', and 'income_lev' because they had a correlation of at least 0.02.  We did not include capital gains because it seemed to be less relevant than that.
 
-
-We felt most confident using SciKit-Learn to run classifications and clustering algorithms. We found that using balanced random forest produced the best results. 
+- We felt most confident using SciKit-Learn to run classifications and clustering algorithms. We found that using the adaptive (ada) boost easy ensemble method produced the best results. 
 
 **Description of how data was split into training and testing sets**
 
-- We also trained the data by using naive random oversampling, smote oversampling, ClusterCentroids resampler, SMOTEEN, EasyEnsembleClassifier, BalancedRandomForestClassifier.
+- In addition to Ada Boost EasyEnsembleClassifier, we also compared other models, such as the naive random oversampling, SMOTE oversampling, ClusterCentroids resampler, SMOTEENN, and BalancedRandomForestClassifier.
+
+- We set "iter" to 500.  The outcome variable is the income level variable (whether it would be above or below $50,000).
+- We opted to stratify, because this stratify parameter splits it so that the proportion of values in the resulting sample will be the same as the proportion of values given to parameter stratify.
 
 **naive random oversampling**
 
