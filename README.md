@@ -211,7 +211,7 @@ Recall: 75% of <$50k outcomes were found
 ### **[Link to FAB5's Google Presentation Slides](https://docs.google.com/presentation/d/1eKOsacdlemOc44aoOOdj5vFGXsFLmb5p/edit?usp=sharing&ouid=113563215958551190830&rtpof=true&sd=true)**
 
 
-- ### For our final dashboard, we are using Tableau and HTML:  **[Link to Fab5's Tableau Dashboard](https://public.tableau.com/app/profile/amanda8204/viz/FinalProject_16668222456730/Dashboard1)**
+### For our final dashboard, we are using Tableau and HTML:  **[Link to Fab5's Tableau Dashboard](https://public.tableau.com/app/profile/amanda8204/viz/FinalProject_16668222456730/Dashboard1)**
 
 **Report for this dashboard:**
 - **Age has the highest correlation to high/low 1994 income at 0.32.**
