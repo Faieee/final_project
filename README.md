@@ -81,7 +81,7 @@ We hope to answer the questions of which variables lead to higher income levels 
 
 
 ### Database
-[Link to SQL database](https://github.com/Faieee/final_project/blob/main/QuickDBD_schema.sql) 
+**[Link to SQL database](https://github.com/Faieee/final_project/blob/main/QuickDBD_schema.sql)** 
 
 ![correlation](https://user-images.githubusercontent.com/68654746/198148402-3a81615b-e439-44b6-8ab4-6841a715b374.jpg)
 ![correllation_seaborn](https://user-images.githubusercontent.com/68654746/198148454-676a70e3-cadb-49c7-b08b-60c5c387ebd7.jpg)
@@ -104,6 +104,8 @@ We hope to answer the questions of which variables lead to higher income levels 
 - We set "iter" to 500.  The outcome variable is the income level variable (whether it would be above or below $50,000).
 - We opted to stratify, because this stratify parameter splits it so that the proportion of values in the resulting sample will be the same as the proportion of values given to parameter stratify.
 
+
+
 **naive random oversampling**
 
 ![NaiveRandomOversampling](https://user-images.githubusercontent.com/68654746/198139966-1130bf4a-108b-495b-b213-57944ea27536.jpg)
@@ -113,6 +115,8 @@ Balanced Accuracy: 0.7384790685541558 or 73.85%
 Precision: 91% for <$50k outcomes
 
 Recall: 71% of <$50k outcomes were found
+
+
 
 **SMOTE oversampling**
 
@@ -124,6 +128,8 @@ Precision: 92% for <$50k outcomes
 
 Recall: 70% of <$50k outcomes were found
 
+
+
 **ClusterCentroids undersampling**
 
 ![ClusterCentroids](https://user-images.githubusercontent.com/68654746/198141085-42a4743c-08cd-4d09-ae27-78b1ff2adf9d.jpg)
@@ -134,7 +140,9 @@ Precision: 92% for <$50k outcomes
 
 Recall: 66% of <$50k outcomes were found
 
-**SMOTEEN**
+
+
+**SMOTEENN**
 
 ![SMOTEEN](https://user-images.githubusercontent.com/68654746/198141390-3f5227a5-8b31-4afa-ab66-547189405faa.jpg)
 
@@ -143,6 +151,8 @@ Balanced Accuracy: 0.7369091820621197 or 73.69%
 Precision: 90% for <$50k outcomes
 
 Recall: 76% of <$50k outcomes were found
+
+
 
 **EasyEnsembleClassifier**
 
@@ -153,6 +163,8 @@ Balanced Accuracy: 0.8050432225910351 or 80.50%
 Precision: 94% for <$50k outcomes
 
 Recall: 76% of <$50k outcomes were found
+
+
 
 **BalancedRandomForestClassifier**
 
@@ -165,6 +177,7 @@ Precision:  94% for <$50k outcomes
 Recall: 75% of <$50k outcomes were found
 
 
+
 **Summary of models by feature importance in descending order**
 
 ![FeatureImportance](https://user-images.githubusercontent.com/68654746/198142756-45b8eac4-3b7f-403d-8140-f9aa926fbf5d.jpg)
@@ -173,18 +186,16 @@ Recall: 75% of <$50k outcomes were found
 
 ![ConfusionSummary](https://user-images.githubusercontent.com/68654746/198142955-c1ef3571-0c0a-4daa-9201-f18cd82f4dec.jpg)
 
-**Explanation of model choice, including limitations and benefits**
+**Explanation of model choice, including limitations and benefits after the second iteration of machine learning**
+
+- We found that using the Ada Boost Easy Ensemble model produced the highest balanced accuracy the first time.  This model is helpful in that it avoids overfitting and that it makes the most of the weak classifiers.  However, we did not believe that it was going to have much more accuracy the second time (with sex and race removed) because its main disadvantage is that it does not deal well with noise or outliers.
 
 - After reviewing all six models under two iterations of variables (one with all major variables and one that eliminated the variables of little correlational significance), the EasyEnsembleClassifer model yields the best results with the highest balanced accuracy rate of 80.50%.  The higher iteration was the one with all variables, even those of less significance, such as gender and race.  However, it may be essential to consider that the cleaned census education dataset may skew the results. Additionally, adults who received education in their native countries outside of the U.S. would likely have different standards. Thus, people from different backgrounds make it difficult to have comparable measures.
 
-Questions to think about...
-- How does it work?
-- Why this specific model?
-- What is the model's accuracy? (capture an interpretation of how accurate, precise, or sensitive the model is)
-- If there are statistics involved, what stats are being included in analysis and why?
-- If no statistics are involved, what would you include if you had more time?
+The correlation coefficient of each variable to the model would be the main statistics that we examined, with age being the most relevant variable out of all of them. 
 
-### Presentation & Dashboard
+
+## Presentation & Dashboard
 
 **[Link to FAB5's Google Presentation Slides](https://docs.google.com/presentation/d/1eKOsacdlemOc44aoOOdj5vFGXsFLmb5p/edit?usp=sharing&ouid=113563215958551190830&rtpof=true&sd=true)**
 
