@@ -100,7 +100,7 @@ We hope to answer the questions of which variables lead to higher income levels 
 - (On the second iteration, we removed race and sex from the models, but this set of models performed worse across the board, so we reverted to the original model.  Thus, the pictures below represent the first iteration with the above-mentioned variables all included.)
 
 
-**Description of how data was split into training and testing sets**
+### **Description of how data was split into training and testing sets**
 
 - In addition to Ada Boost EasyEnsembleClassifier, we also compared other models, such as the naive random oversampling, SMOTE oversampling, ClusterCentroids resampler, SMOTEENN, and BalancedRandomForestClassifier.
 
@@ -109,7 +109,7 @@ We hope to answer the questions of which variables lead to higher income levels 
 
 
 
-**naive random oversampling**
+### **naive random oversampling**
 
 ![NaiveRandomOversampling](https://user-images.githubusercontent.com/68654746/198139966-1130bf4a-108b-495b-b213-57944ea27536.jpg)
 
@@ -121,7 +121,7 @@ Recall: 71% of <$50k outcomes were found
 
 
 
-**SMOTE oversampling**
+### **SMOTE oversampling**
 
 ![SMOTE](https://user-images.githubusercontent.com/68654746/198140668-064d4645-65d2-4fb4-8eab-7524afbdc70d.jpg)
 
@@ -133,7 +133,7 @@ Recall: 70% of <$50k outcomes were found
 
 
 
-**ClusterCentroids undersampling**
+### **ClusterCentroids undersampling**
 
 ![ClusterCentroids](https://user-images.githubusercontent.com/68654746/198141085-42a4743c-08cd-4d09-ae27-78b1ff2adf9d.jpg)
 
@@ -145,7 +145,7 @@ Recall: 66% of <$50k outcomes were found
 
 
 
-**SMOTEENN**
+### **SMOTEENN**
 
 ![SMOTEEN](https://user-images.githubusercontent.com/68654746/198141390-3f5227a5-8b31-4afa-ab66-547189405faa.jpg)
 
@@ -157,7 +157,7 @@ Recall: 76% of <$50k outcomes were found
 
 
 
-**EasyEnsembleClassifier**
+### **EasyEnsembleClassifier**
 
 ![EasyEnsembleClassifier](https://user-images.githubusercontent.com/68654746/198141709-fd8e09d7-61cb-4896-b484-5775fcc93d4d.jpg)
 
@@ -169,7 +169,7 @@ Recall: 76% of <$50k outcomes were found
 
 
 
-**BalancedRandomForestClassifier**
+### **BalancedRandomForestClassifier**
 
 ![BalancedRandomForest](https://user-images.githubusercontent.com/68654746/198142393-15e38a7b-650f-456d-adbb-b5c3cdb78a25.jpg)
 
@@ -181,7 +181,8 @@ Recall: 75% of <$50k outcomes were found
 
 
 
-**Summary of models by feature importance in descending order**
+
+### **Summary of models by feature importance in descending order**
 
 - **The correlation coefficient of each variable to the model would be the main statistics that we examined, with age being the most relevant variable out of all of them.** 
 
@@ -201,13 +202,13 @@ Recall: 75% of <$50k outcomes were found
 - It may be essential to consider that the cleaned census education dataset may skew the results. Additionally, adults who received education in their native countries outside of the U.S. may have different standards. Thus, people from different backgrounds make it difficult to have comparable measures.
 
 
+
 ## Presentation & Dashboard
 
-**[Link to FAB5's Google Presentation Slides](https://docs.google.com/presentation/d/1eKOsacdlemOc44aoOOdj5vFGXsFLmb5p/edit?usp=sharing&ouid=113563215958551190830&rtpof=true&sd=true)**
+### **[Link to FAB5's Google Presentation Slides](https://docs.google.com/presentation/d/1eKOsacdlemOc44aoOOdj5vFGXsFLmb5p/edit?usp=sharing&ouid=113563215958551190830&rtpof=true&sd=true)**
 
-For our final dashboard, we are using Tableau and HTML:
 
-**[Link to Fab5's Tableau Dashboard](https://public.tableau.com/app/profile/amanda8204/viz/FinalProject_16668222456730/Dashboard1)**
+- ### For our final dashboard, we are using Tableau and HTML:  **[Link to Fab5's Tableau Dashboard](https://public.tableau.com/app/profile/amanda8204/viz/FinalProject_16668222456730/Dashboard1)**
 
 **Report for this dashboard:**
 - **Age has the highest correlation to high/low 1994 income at 0.32.**
@@ -218,8 +219,11 @@ For our final dashboard, we are using Tableau and HTML:
 - Higher income earners tended to have more capital gains, which stands to reason.
 - Low income earners worked 39 hours per week on average, while higher income earners worked 45.5 hours per week on average.
 
-**[Link to Country comparision Tableau](https://public.tableau.com/app/profile/lina.valencia/viz/Income_Comparison_US_Dollars/IncomecomparisoninUSDollars?publish=yes)**
 
+### **[Link to Country comparision Tableau](https://public.tableau.com/app/profile/lina.valencia/viz/Income_Comparison_US_Dollars/IncomecomparisoninUSDollars?publish=yes)**
+
+
+**Report for this dashboard:**
 - Within Tableau, we used the filter, highlight, and actions to create tables and charts similar to ones we've produced in Jupyter Notebook and SQL. 
 - We also wanted to incorporate the inflation rate website in our analysis so the URL action allowed us to display it in Tableau. 
 - One interactive chart we're interested in is hours worked per week. 
