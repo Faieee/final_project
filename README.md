@@ -1,5 +1,7 @@
-# Final Project ~ presented by Anton, Amanda, Lina, Sharon, Lina, Elise
-![Group avatar created with https://avatarmaker.com/](https://github.com/Faieee/final_project/blob/main/static/images/Fab5_Avatars.png)
+# 1994 Census Adult Dataset Project ~ presented by Anton, Amanda, Elise, Sharon, and Lina
+<p align="center">
+  <img width="260" height="300" src="https://github.com/Faieee/final_project/blob/main/static/images/Fab5_Avatars.png">
+</p>
 
 ## Modeling and Forecasting Income Inequality in the United States
 
@@ -167,7 +169,7 @@ Questions to think about...
 
 ### Presentation & Dashboard
 
-**[Link to FAB5's Google Presentation Slides](https://docs.google.com/presentation/d/1eKOsacdlemOc44aoOOdj5vFGXsFLmb5p/edit?usp=sharing&ouid=113563215958551190830&rtpof=true&sd=true) **
+**[Link to FAB5's Google Presentation Slides](https://docs.google.com/presentation/d/1eKOsacdlemOc44aoOOdj5vFGXsFLmb5p/edit?usp=sharing&ouid=113563215958551190830&rtpof=true&sd=true)**
 
 For our final dashboard, we are using Tableau and HTML:
 
@@ -182,7 +184,7 @@ For our final dashboard, we are using Tableau and HTML:
 - Higher income earners tended to have more capital gains, which stands to reason.
 - Low income earners worked 39 hours per week on average, while higher income earners worked 45.5 hours per week on average.
 
-**[Link to Country comparision Tableau](https://public.tableau.com/app/profile/lina.valencia/viz/Income_Comparison_US_Dollars/IncomecomparisoninUSDollars?publish=yes) **
+**[Link to Country comparision Tableau](https://public.tableau.com/app/profile/lina.valencia/viz/Income_Comparison_US_Dollars/IncomecomparisoninUSDollars?publish=yes)**
 
 - Within Tableau, we used the filter, highlight, and actions to create tables and charts similar to ones we've produced in Jupyter Notebook and SQL. 
 - We also wanted to incorporate the inflation rate website in our analysis so the URL action allowed us to display it in Tableau. 
