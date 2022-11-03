@@ -1,5 +1,5 @@
 # Final Project ~ presented by Anton, Amanda, Lina, Sharon, Lina, Elise
-![avatar](https://user-images.githubusercontent.com/68654746/199106232-576cfbc0-38c3-4e6d-ac0b-31c94a9241f7.jpg)
+![Group avatar created with https://avatarmaker.com/](https://github.com/Faieee/final_project/blob/main/static/images/Fab5_Avatars.png)
 
 ## Modeling and Forecasting Income Inequality in the United States
 
@@ -35,14 +35,14 @@ We hope to answer the questions of which variables lead to higher income levels 
 
 ![age_boxplot](https://user-images.githubusercontent.com/68654746/199134388-9dcec6d1-b5b2-418f-8d81-8e6374b94f8e.jpg)
 
-2. Country is expected to yield higher incomes in 1st world and capitalist countries.
+2. Country is expected to yield higher incomes in 1st world and capitalist countries of origin.
 
 3. Education Level is expected to yield the lowest results at the extremes (high school or less, and doctorate).  With doctorates, many students are earning poverty-level wages by working for professors, or they major in something esoteric that does not connect to the labor force.  We would expect the Master’s degree holders to earn the most, followed by the Bachelor’s degree.  The Associates may or may not hit the threshold of $50K.  The AA degree may be a border zone where $50K begins for some people.
 
 ![edu](https://user-images.githubusercontent.com/68654746/198147358-63467d2c-804e-4cb9-a200-0aeeb12a480e.jpg)
 ![image (3)](https://user-images.githubusercontent.com/68654746/198133670-6c39e672-a49c-47a1-a48a-fae35c1d9b52.png)
 
-4. Gender may be related in non-U.S. countries where the mother is more expected to stay home with children and/or work part-time.
+4. Gender may be related in non-U.S. countries where the mother is more expected to stay home with children and/or work part-time, but we do not suspect it will matter much in the U.S.
 
 ![sex](https://user-images.githubusercontent.com/68654746/198148017-d793c45f-306d-41a4-9923-409c5be9b3d8.jpg)
 ![relationship](https://user-images.githubusercontent.com/68654746/198147622-6482ade6-3172-4f52-b260-f854a51b48b3.jpg)
@@ -52,10 +52,10 @@ We hope to answer the questions of which variables lead to higher income levels 
 
 ![workclass](https://user-images.githubusercontent.com/68654746/198147245-5c5da75e-102f-4bd1-9fe1-8a54da7aeee4.jpg)
 
-6.  Race may not be relevant as of the date of this dataset, especially in countries where the nationality is homogenous.
+6.  Race may not be relevant as of the date of this dataset, especially in countries where the nationality is homogeneous.
 ![race](https://user-images.githubusercontent.com/68654746/198147978-ac58caf2-f2aa-4c3d-89a2-058b3310af41.jpg)
 
-7.  Families with children may have lower income attainment.  Single people may be more career-oriented and earn higher incomes.
+7.  Families with children and married people may earn higher incomes than the unmarried and divorced.
 
 ![martialStatus](https://user-images.githubusercontent.com/68654746/198147503-e3e72ba6-2a25-497b-8ded-8de27fd223ba.jpg)
 ![image (5)](https://user-images.githubusercontent.com/68654746/198133705-af4e9333-d8fd-432d-8d5f-c962b369b1b4.png)
@@ -167,7 +167,7 @@ Questions to think about...
 
 ### Presentation & Dashboard
 
-[Link to FAB5's Google Presentation Slides](https://docs.google.com/presentation/d/1eKOsacdlemOc44aoOOdj5vFGXsFLmb5p/edit?usp=sharing&ouid=113563215958551190830&rtpof=true&sd=true)
+**[Link to FAB5's Google Presentation Slides](https://docs.google.com/presentation/d/1eKOsacdlemOc44aoOOdj5vFGXsFLmb5p/edit?usp=sharing&ouid=113563215958551190830&rtpof=true&sd=true) **
 
 For our final dashboard, we are using Tableau and HTML:
 
@@ -182,8 +182,13 @@ For our final dashboard, we are using Tableau and HTML:
 - Higher income earners tended to have more capital gains, which stands to reason.
 - Low income earners worked 39 hours per week on average, while higher income earners worked 45.5 hours per week on average.
 
-[Link to Country comparision Tableau](https://public.tableau.com/app/profile/lina.valencia/viz/Income_Comparison_US_Dollars/IncomecomparisoninUSDollars?publish=yes)
-Within Tableau, we used the filter, highlight, and actions to create tables and charts similar to ones we've produced in Jupyter Notebook and SQL. We also wanted to incorporate the inflation rate website in our analysis so the URL action allowed us to display it in Tableau. One interactive chart we're interested in is hours worked per week. Tableau also includes comparative charts, derived from https://stats.oecd.org/index.aspx?queryid=66670, of various cuntries that match those from the original dataset. The purpose of this comparison is to show what the average income is in some of the countries the participants are from vs the income in the United States. 
+**[Link to Country comparision Tableau](https://public.tableau.com/app/profile/lina.valencia/viz/Income_Comparison_US_Dollars/IncomecomparisoninUSDollars?publish=yes) **
+
+- Within Tableau, we used the filter, highlight, and actions to create tables and charts similar to ones we've produced in Jupyter Notebook and SQL. 
+- We also wanted to incorporate the inflation rate website in our analysis so the URL action allowed us to display it in Tableau. 
+- One interactive chart we're interested in is hours worked per week. 
+- Tableau also includes comparative charts, derived from https://stats.oecd.org/index.aspx?queryid=66670, of various cuntries that match those from the original dataset. 
+- The purpose of this comparison is to show what the average income is in some of the countries the participants are from vs the income in the United States. 
 
 
 ## Website Progress:
