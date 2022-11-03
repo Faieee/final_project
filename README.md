@@ -75,13 +75,16 @@ We hope to answer the questions of which variables lead to higher income levels 
 
 - Further analysis and visualizations were completed using Python libraries and VBA. We also formed a connection string with SQLAlchemy and created a schema in PostgreSQL. 
 
+
+
+# Database
+
 **Below is our ERD diagram with relationships:**
 
 ![ERD](https://user-images.githubusercontent.com/68654746/199123519-214ec72d-2913-477e-8102-7e0dd8b358ce.png)
 
 
-### Database
-**[Link to SQL database](https://github.com/Faieee/final_project/blob/main/QuickDBD_schema.sql)** 
+### **[Link to SQL database](https://github.com/Faieee/final_project/blob/main/QuickDBD_schema.sql)** 
 
 ![correlation](https://user-images.githubusercontent.com/68654746/198148402-3a81615b-e439-44b6-8ab4-6841a715b374.jpg)
 ![correllation_seaborn](https://user-images.githubusercontent.com/68654746/198148454-676a70e3-cadb-49c7-b08b-60c5c387ebd7.jpg)
@@ -90,7 +93,7 @@ We hope to answer the questions of which variables lead to higher income levels 
 
 
 
-## Machine Learning Model 
+# Machine Learning Model 
 
 ### **Description of preliminary feature engineering and preliminary feature selection, including their decision-making process**
 - **On the first iteration, we selected 'age', 'workclass', 'education_cat_lev', 'marital_status', 'occupation', 'relationship', 'race', 'sex', and 'income_lev' because they had a correlation of at least 0.02.  We did not include capital gains because it seemed to be less relevant than that.**
