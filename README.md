@@ -92,10 +92,13 @@ We hope to answer the questions of which variables lead to higher income levels 
 
 ## Machine Learning Model 
 
-**Description of preliminary feature engineering and preliminary feature selection, including their decision-making process**
-- On the first iteration, we selected 'age', 'workclass', 'education_cat_lev', 'marital_status', 'occupation', 'relationship', 'race', 'sex', and 'income_lev' because they had a correlation of at least 0.02.  We did not include capital gains because it seemed to be less relevant than that.
+### **Description of preliminary feature engineering and preliminary feature selection, including their decision-making process**
+- **On the first iteration, we selected 'age', 'workclass', 'education_cat_lev', 'marital_status', 'occupation', 'relationship', 'race', 'sex', and 'income_lev' because they had a correlation of at least 0.02.  We did not include capital gains because it seemed to be less relevant than that.**
 
 - We felt most confident using SciKit-Learn to run classifications and clustering algorithms. We found that using the adaptive (ada) boost easy ensemble method produced the best results. 
+
+- (On the second iteration, we removed race and sex from the models, but this set of models performed worse across the board, so we reverted to the original model.  Thus, the pictures below represent the first iteration with the above-mentioned variables all included.)
+
 
 **Description of how data was split into training and testing sets**
 
@@ -158,11 +161,11 @@ Recall: 76% of <$50k outcomes were found
 
 ![EasyEnsembleClassifier](https://user-images.githubusercontent.com/68654746/198141709-fd8e09d7-61cb-4896-b484-5775fcc93d4d.jpg)
 
-Balanced Accuracy: 0.8050432225910351 or 80.50%
+**Balanced Accuracy: 0.8050432225910351 or 80.50%**
 
-Precision: 94% for <$50k outcomes
+**Precision: 94% for <$50k outcomes**
 
-Recall: 76% of <$50k outcomes were found
+**Recall: 76% of <$50k outcomes were found**
 
 
 
@@ -180,7 +183,7 @@ Recall: 75% of <$50k outcomes were found
 
 **Summary of models by feature importance in descending order**
 
-- The correlation coefficient of each variable to the model would be the main statistics that we examined, with age being the most relevant variable out of all of them. 
+- **The correlation coefficient of each variable to the model would be the main statistics that we examined, with age being the most relevant variable out of all of them.** 
 
 ![FeatureImportance](https://user-images.githubusercontent.com/68654746/198142756-45b8eac4-3b7f-403d-8140-f9aa926fbf5d.jpg)
 
@@ -191,9 +194,11 @@ Recall: 75% of <$50k outcomes were found
 
 ### **Explanation of model choice, including limitations and benefits after the second iteration of machine learning**
 
-- We found that using the Ada Boost Easy Ensemble model produced the highest balanced accuracy the first time.  This model is helpful in that it avoids overfitting and that it makes the most of the weak classifiers.  However, we did not believe that it was going to have much more accuracy the second time (with sex and race removed) because its main disadvantage is that it does not deal well with noise or outliers.
+- We found that using the Ada Boost Easy Ensemble model produced the highest balanced accuracy the first time (relative to the second time).  This model is helpful in that it avoids overfitting and that it makes the most of the weak classifiers.  However, we did not believe that it was going to have much more accuracy the second time (with sex and race removed) because its main disadvantage is that it does not deal well with noise or outliers.
 
-- After reviewing all six models under two iterations of variables (one with all major variables and one that eliminated the variables of little correlational significance), the EasyEnsembleClassifer model yields the best results with the highest balanced accuracy rate of 80.50%.  The higher iteration was the one with all variables, even those of less significance, such as gender and race.  However, it may be essential to consider that the cleaned census education dataset may skew the results. Additionally, adults who received education in their native countries outside of the U.S. would likely have different standards. Thus, people from different backgrounds make it difficult to have comparable measures.
+- **After reviewing all six models under two iterations of variables (one with all major variables and one that eliminated the variables of little correlational significance), the EasyEnsembleClassifer model yields the best results with the highest balanced accuracy rate of 80.50%.**  The higher iteration was the one with all variables, even those of less significance, such as gender and race.  
+
+- It may be essential to consider that the cleaned census education dataset may skew the results. Additionally, adults who received education in their native countries outside of the U.S. may have different standards. Thus, people from different backgrounds make it difficult to have comparable measures.
 
 
 ## Presentation & Dashboard
@@ -205,9 +210,9 @@ For our final dashboard, we are using Tableau and HTML:
 **[Link to Fab5's Tableau Dashboard](https://public.tableau.com/app/profile/amanda8204/viz/FinalProject_16668222456730/Dashboard1)**
 
 **Report for this dashboard:**
-- Age has the highest correlation to high/low 1994 income at 0.32. 
+- **Age has the highest correlation to high/low 1994 income at 0.32.**
 - This visualization shows that the average age of respondents in the high income group was 44, while it was 34 in the low income group.
-- The next highest correlation is relationship at 0.16. Marital Status, a similar variable, was 0.14. The underlying variable, sex, which only had a correlation of 0.02 may have accounted for this slight difference.
+- **The next highest correlation is Relationship at 0.16.** Marital Status, a similar variable, was 0.14. The underlying variable, sex, which only had a correlation of 0.02 may have accounted for this slight difference.
 - Educational Attainment had a correlation of 0.14. Education levels vary across country of origin; however, higher earners in our U.S. dataset tended to have college degrees, whereas lower income earners tended to not have college degrees.
 - Although race is not well correlated to income, our dataset had a preponderance of white people.
 - Higher income earners tended to have more capital gains, which stands to reason.
@@ -222,8 +227,8 @@ For our final dashboard, we are using Tableau and HTML:
 - The purpose of this comparison is to show what the average income is in some of the countries the participants are from vs the income in the United States. 
 
 
-## Website Progress:
-- The website is created using HTML, CSS, and Javascript.  :sunglasses:
+## :sunglasses: Website Progress:
+- The website is created using HTML, CSS, and Javascript.  
 
 - The word cloud at the top is done in NVivo version 12, and this software reads the dataset and displays larger font for the words that appear most often.  This also helped to guide our understanding of which variables may have been more or less popular in the dataset, and confirmed our understanding that the dataset may be somewhat skewed toward white males who work in private sector.
 
