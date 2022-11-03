@@ -66,12 +66,19 @@ We hope to answer the questions of which variables lead to higher income levels 
 ![image (5)](https://user-images.githubusercontent.com/68654746/198133705-af4e9333-d8fd-432d-8d5f-c962b369b1b4.png)
 
 ### Preliminary data preprocessing
-Our first step was loading the data in Jupyter Notebook and perform a preliminary exploration of the Census dataset. Dropping a few columns first, we wanted to focus on age, final weight, education (in numerical form), capital gain and loss, and hours per week worked. Below is a table summarizing the data descriptive statistic:
+- Our first step was loading the data in Jupyter Notebook and performing a preliminary exploration of the 1994 Census dataset. Dropping a few columns first, we wanted to focus on age, final weight, education (in numerical form), capital gain and loss, and hours per week worked.  
+
+- Below is a table summarizing the data's descriptive statistics:
 ![census_description](https://user-images.githubusercontent.com/68654746/198146984-9a471231-4242-41b2-b3b6-41b25485f523.jpg)
 
-We then pulled unique values and examined if there were any duplicate values in each of the columns of the dataset. Once we cleaned our data, we extracted some preliminary tables, but found that we still needed to drop several more columns and values in order to be able to develop better visualizations and statistical findings. That led us to created cleaned adult_c2.data, adult_c2.names, and census_data_education csv. Further analysis and visualizations were completed using Python libraries and VBA. We also formed a connection string with SQLAlchemy and created a schema in PostgreSQL. Below is our ERD diagram with relationships:
+- We then pulled unique values and examined if there were any duplicate values in each of the columns of the dataset. Once we cleaned our data, we extracted some preliminary tables, but found that we still needed to drop several more columns and values in order to be able to develop better visualizations and statistical findings. That led us to created cleaned adult_c2.data, adult_c2.names, and census_data_education csv. 
+
+- Further analysis and visualizations were completed using Python libraries and VBA. We also formed a connection string with SQLAlchemy and created a schema in PostgreSQL. 
+
+**Below is our ERD diagram with relationships:**
 
 ![ERD](https://user-images.githubusercontent.com/68654746/199123519-214ec72d-2913-477e-8102-7e0dd8b358ce.png)
+
 
 ### Database
 [Link to SQL database](https://github.com/Faieee/final_project/blob/main/QuickDBD_schema.sql) 
@@ -79,17 +86,20 @@ We then pulled unique values and examined if there were any duplicate values in 
 ![correlation](https://user-images.githubusercontent.com/68654746/198148402-3a81615b-e439-44b6-8ab4-6841a715b374.jpg)
 ![correllation_seaborn](https://user-images.githubusercontent.com/68654746/198148454-676a70e3-cadb-49c7-b08b-60c5c387ebd7.jpg)
 
+- We merged PostgreSQL and our Jupyter Notebooks in order to extrapulate and form the tables we were interested in analyzing. Using PostgreSQL, we created a schema and uploaded the census_data.csv, and after exploratory data analysis created census_data_EDA.ipynb and census_data_EDA_rev2.ipynb. In another schema, we uploaded adult_c2.data.csv and wanted to look specifically at adult education level and capital gains. We are still working on this notebook under data_c2.ipynb. We may integrate Flask to display the data.
+
+
+
 ### Machine Learning Model 
 
-✓ Description of preliminary feature engineering and preliminary feature selection, including their decision-making process 
+**Description of preliminary feature engineering and preliminary feature selection, including their decision-making process**
 
-We merged PostgreSQL and our Jupyter Notebooks in order to extrapulate and form the tables we were interested in analyzing. Using PostgreSQL, we created a schema and uploaded the census_data.csv, and after exploratory data analysis created census_data_EDA.ipynb and census_data_EDA_rev2.ipynb. In another schema, we uploaded adult_c2.data.csv and wanted to look specifically at adult education level and capital gain. We are still working on this notebook under data_c2.ipynb. We may integrate Flask to display the data.
 
 We felt most confident using SciKit-Learn to run classifications and clustering algorithms. We found that using balanced random forest produced the best results. 
 
-✓ Description of how data was split into training and testing sets 
+**Description of how data was split into training and testing sets**
 
-We also trained the data by using naive random oversampling, smote oversampling, ClusterCentroids resampler, SMOTEEN, EasyEnsembleClassifier, BalancedRandomForestClassifier.
+- We also trained the data by using naive random oversampling, smote oversampling, ClusterCentroids resampler, SMOTEEN, EasyEnsembleClassifier, BalancedRandomForestClassifier.
 
 **naive random oversampling**
 
@@ -151,6 +161,7 @@ Precision:  94% for <$50k outcomes
 
 Recall: 75% of <$50k outcomes were found
 
+
 **Summary of models by feature importance in descending order**
 
 ![FeatureImportance](https://user-images.githubusercontent.com/68654746/198142756-45b8eac4-3b7f-403d-8140-f9aa926fbf5d.jpg)
@@ -159,9 +170,9 @@ Recall: 75% of <$50k outcomes were found
 
 ![ConfusionSummary](https://user-images.githubusercontent.com/68654746/198142955-c1ef3571-0c0a-4daa-9201-f18cd82f4dec.jpg)
 
-✓ Explanation of model choice, including limitations and benefits
+**Explanation of model choice, including limitations and benefits**
 
-After reviewing all six models, the EasyEnsembleClassifer model yields the best results with the highest balanced accuracy rate of 80.50%. However, it may be essential to consider that the cleaned census education dataset may skew the results. Additionally, adults who received education in their native countries outside of the U.S. would likely have different standards. Thus, people from different backgrounds make it difficult to have comparable measures.
+- After reviewing all six models under two iterations of variables (one with all major variables and one that eliminated the variables of little correlational significance), the EasyEnsembleClassifer model yields the best results with the highest balanced accuracy rate of 80.50%.  The higher iteration was the one with all variables, even those of less significance, such as gender and race.  However, it may be essential to consider that the cleaned census education dataset may skew the results. Additionally, adults who received education in their native countries outside of the U.S. would likely have different standards. Thus, people from different backgrounds make it difficult to have comparable measures.
 
 Questions to think about...
 - How does it work?
