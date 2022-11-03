@@ -1,6 +1,9 @@
-# 1994 Census Adult Dataset Project ~ presented by Anton, Amanda, Elise, Sharon, and Lina
+# 1994 Census Adult Dataset Project ~ presented by the Fab 5
+
+## Anton, Amanda, Elise, Sharon, and Lina
+
 <p align="center">
-  <img width="260" height="300" src="https://github.com/Faieee/final_project/blob/main/static/images/Fab5_Avatars.png">
+  <img width="1000" height="200" src="https://github.com/Faieee/final_project/blob/main/static/images/AvatarsHorizontal.png">
 </p>
 
 ## Modeling and Forecasting Income Inequality in the United States
