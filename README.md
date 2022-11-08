@@ -205,9 +205,6 @@ Recall: 75% of <$50k outcomes were found
 
 ![ConfusionSummary](https://user-images.githubusercontent.com/68654746/198142955-c1ef3571-0c0a-4daa-9201-f18cd82f4dec.jpg)
 
-**Variable Correlation Summary**
-<img src="https://github.com/Faieee/final_project/blob/main/Resources/images/VariableCorrelations.png">
-
 ### **Explanation of model choice, including limitations and benefits after the second iteration of machine learning**
 
 - We found that using the Ada Boost Easy Ensemble model produced the highest balanced accuracy the first time (relative to the second time).  This model is helpful in that it avoids overfitting and that it makes the most of the weak classifiers.  However, we did not believe that it was going to have much more accuracy the second time (with sex and race removed) because its main disadvantage is that it does not deal well with noise or outliers.
@@ -227,6 +224,11 @@ Recall: 75% of <$50k outcomes were found
 
 **Report for this dashboard:**
 - **Age has the highest correlation to high/low 1994 income at 0.32.**
+
+*Variable Correlation Summary*
+<p>
+  <img src="https://github.com/Faieee/final_project/blob/main/Resources/images/VariableCorrelations.png">
+</p>
 
 - This visualization shows that the average age of respondents in the high income group was 44, while it was 34 in the low income group.
 <p align="center">
