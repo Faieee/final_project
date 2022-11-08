@@ -9,73 +9,87 @@
 ## Modeling and Forecasting Income Inequality in the United States
 
 ### Topic & Data Source
-The dataset selected was derived from the Census.gov 1994 Adult Dataset, which looks at whether participants earn less or more than $50,000 per year. The dataset can be found on UCI Machine Learning Repository: 
+The dataset selected was derived from the Census.gov 1994 Adult Dataset, which looks at whether participants earn less or more than $50,000 per year. In this dataset, there are 32,561 respondants and 14 columns with attributes that determine an adult's annual income. 
+
+Originally cleaned and donnated by Ronny Kohavi and Barry Becker (Data Mining and Visualization, Silicon Graphics) on May 1996, the dataset can be found on UCI Machine Learning Repository: 
 https://archive.ics.uci.edu/ml/datasets/census+income 
 
-Although the Census delays the publication of the adult dataset to protect the privacy of the respondents, we are interested in comparing the 1994 publication to the present day, even in the absence of a more current comparison dataset. In the U.S., an income of $50,000 in 1994 is equivalent to approximately $100,000 today, as described in https://www.in2013dollars.com/us/inflation/1994?amount=50000. The annual income disparity between the rich and the poor is a hotly debated topic in the political arena and communities and households. Consequently, we are curious to see how and if any of the variables collected in this survey impact income levels. Additionally, we would like to see if a trend can be measured and used to practice machine learning problems such as classification. One limitation of this survey we noticed right away was the lack of a variable for "inherited wealth." However, the survey does collect the variable "capital gain," which could be a potential proxy.
+Although the Census delays the publication of the adult dataset to protect the privacy of the respondents, we are interested in deep diving into the 1994 publication and then comparing it to the present day, even in the absence of a more current comparison dataset. For some brief background, an American income of $50,000 in 1994 is equivalent to approximately $100,000 today, as described in https://www.in2013dollars.com/us/inflation/1994?amount=50000. And so, the annual income disparity between the rich and the poor has been an evergrowing and hotly debated topic in the political arena, communities and households across the nation. For these reasons, we are all curious to see how, and if any of the variables collected in this survey, impact an individual's income potential. Additionally, could a trend be measured and further used to practice machine learning problems such as classification? One limitation of this survey we noticed right away was the lack of a variable for "inherited wealth." However, the survey does collect the variable "capital gain," which could be a potential proxy.
 
-**List of columns from the 1994 Census dataset:** 
+### **List of columns from the 1994 Census dataset:** 
 - **Column A = the participant ID number.**
-- **Column B =  age:** the respondent’s age as an integer;
-- **Column C = workclass:** Pertains to their sector of employment or independent contractor status (Private, Self-emp-not-inc, Self-emp-inc, Federal-gov, Local-gov, State-gov, Without-pay, Never-worked).
+- **Column B =  age:** the respondent’s age as an integer. *(range from 17 - 90 years old)*
+- **Column C = workclass:** pertains to their sector of employment or independent contractor status.
+*(Private, Self-emp-not-inc, Self-emp-inc, Federal-gov, Local-gov, State-gov, Without-pay, Never-worked)*
 - **Column D = fnlwgt:** how common is this respondent in the general population?  The final weight is an approximate number of people in the general population that are believed to be represented by this respondent.
-- **Column E = education:** the highest level of education received by the respondent in nominal categories (Preschool, 1st-4th, 5th-6th, 7th-8th,  9th, 10th, 11th, 12th, HS-grad, Some-college, Assoc-voc, Assoc-acdm, Bachelors, Masters, Prof-school, Doctorate.)
+- **Column E = education:** the highest level of education received by the respondent in nominal categories. *(Preschool, 1st-4th, 5th-6th, 7th-8th,  9th, 10th, 11th, 12th, HS-grad, Some-college, Assoc-voc, Assoc-acdm, Bachelors, Masters, Prof-school, Doctorate)*
 - **Column F =  education_num:** pertains to the highest level of education in numerical form, which was adjusted for the fact that the preschool-educated respondents had to be placed at a “1,” which then “bumped up” the numbering for the other educational attainments, given that preschool could not have been an integer less than 0 if 1st grade had been the “1.”
-- **Column G = marital_status:** Pertains to the marital status of an individual. For example, Married-civ-spouse means a civilian spouse, and Married-AF-spouse means a spouse in the Armed Forces. These nominal categories are Married-civ-spouse, Married-AF-spouse, Married-spouse-absent, Separated, Divorced, Widowed, and Never-married.
-- **Column H = occupation:** tTis represents the type of job held by the respondent.  These include: Craft-repair, Other-service, Sales, Handlers-cleaners, Machine-op-inspct, Adm-clerical, Farming-fishing, Transport-moving, Priv-house-serv, Protective-serv, Armed-Forces, Tech-support, Exec-managerial, and Prof-specialty.
-- **Column I = relationship:** This may duplicate the meaning of the marital status column, such as if the respondent is a Husband. The options in this group are very similar. They include Husband, Wife, Unmarried, Own-child, Not-in-family, and Other-relative.
-- **Column J = race:** This describes the respondent’s race, such as: Amer-Indian-Eskimo, Asian-Pac-Islander, Black, White, and Other.
-- **Column K = sex:** This represents the biological sex as either Male or female.
-- **Column L =  capital_gain:** Capital gains refer to the profit from selling property or an investment. The respondent may have earned money from something other than employment. It is an integer greater than or equal to 0.
-- **Column M = capital_loss:** Capital loss is the opposite of capital gains—the respondent lost money from some property or investment.  It is also an integer greater than or equal to 0.
-- **Column N = hours_per_week:** This is the workweek of the respondent as a continuous number.
-- **Column O = native_country:** This is the respondent’s country of origin. The Census made spelling errors, which we keep until they can be cleaned. For example, Hong should say Hong-Kong, Trinadad should say Trinidad, Holand should say Holland, and Columbia should say Colombia. In addition, we do not know what South means. South could represent either South Korea or South Africa. We do not have reason to think it means South Sudan because it is 1994 data. For now, these categories include Cambodia, Canada, China, Columbia, Cuba, Dominican-Republic, Ecuador, El-Salvador, England, France, Germany, Greece, Guatemala, Haiti, Holand-Netherlands, Honduras, Hong, Hungary, India, Iran, Ireland, Italy, Jamaica, Japan, Laos, Mexico, Nicaragua, Outlying-US(Guam-USVI-etc), Philippines, Poland, Portugal, Puerto-Rico, Scotland, South, Taiwan, Thailand, Trinadad&Tobago, Peru, United-States, Vietnam, and Yugoslavia 
-- **Column P = income:** his represents whether the respondent earns more or less than $50,000 annually, using logic: <= 50K or >50K.
+- **Column G = marital_status:** pertains to the marital status of an individual. For example, Married-civ-spouse means a civilian spouse, and Married-AF-spouse means a spouse in the Armed Forces. *These nominal categories are Married-civ-spouse, Married-AF-spouse, Married-spouse-absent, Separated, Divorced, Widowed, and Never-married.*
+- **Column H = occupation:** this represents the type of job held by the respondent.  *These include: Craft-repair, Other-service, Sales, Handlers-cleaners, Machine-op-inspct, Adm-clerical, Farming-fishing, Transport-moving, Priv-house-serv, Protective-serv, Armed-Forces, Tech-support, Exec-managerial, and Prof-specialty.*
+- **Column I = relationship:** this may duplicate the meaning of the marital status column, such as if the respondent is a Husband. The options in this group are very similar. *(Husband, Wife, Unmarried, Own-child, Not-in-family, and Other-relative)*
+- **Column J = race:** This describes the respondent’s race, such as: *Amer-Indian-Eskimo, Asian-Pac-Islander, Black, White, and Other.*
+- **Column K = sex:** This represents the biological sex as either *Male or female.*
+- **Column L =  capital_gain:** capital gains refer to the profit from selling property or an investment. The respondent may have earned money from something other than employment. *It is an integer greater than or equal to 0.*
+- **Column M = capital_loss:** capital loss is the opposite of capital gains—the respondent lost money from some property or investment.  It is also an integer greater than or equal to 0.
+- **Column N = hours_per_week:** this is the workweek of the respondent as a continuous number.
+- **Column O = native_country:** this is the respondent’s country of origin. The Census made spelling errors, which we keep until they can be cleaned. For example, Hong should say Hong-Kong, Trinadad should say Trinidad, Holand should say Holland, and Columbia should say Colombia. In addition, we do not know what South means. South could represent either South Korea or South Africa. We do not have reason to think it means South Sudan because it is 1994 data. *For now, these categories include Cambodia, Canada, China, Columbia, Cuba, Dominican-Republic, Ecuador, El-Salvador, England, France, Germany, Greece, Guatemala, Haiti, Holand-Netherlands, Honduras, Hong, Hungary, India, Iran, Ireland, Italy, Jamaica, Japan, Laos, Mexico, Nicaragua, Outlying-US(Guam-USVI-etc), Philippines, Poland, Portugal, Puerto-Rico, Scotland, South, Taiwan, Thailand, Trinadad&Tobago, Peru, United-States, Vietnam, and Yugoslavia.* 
+- **Column P = income:** this represents whether the respondent earns more or less than $50,000 annually, *using logic: <= 50K or >50K.*
 
-### Questions
-We hope to answer the questions of which variables lead to higher income levels and how 1994 income is comparable to today. Regarding machine learning modeling, we must focus on the United States data rather than the world data because there will not be enough data points to include the other countries. We would look at the U.S. data for the machine learning component, but we may look at the world data for the database component.
+## Topic Interest
+We hope to find answers of which variables lead to higher annual income levels. Regarding machine learning modeling, we would need to focus on the United States data rather than the world data because there will not be enough data points to include the other countries. We would look at the U.S. data for the machine learning component, but we may look at the world data for the database component.
 
-**Possible Hypotheses:**
-1. Higher age will be likely to yield higher income level over $50K.
+## Preliminary data cleaning
+- Our first step was loading the data into Jupyter Notebook and performing a preliminary exploration of the 1994 Census dataset using Pandas library. While we verified the potential use of the dataset for our final project, we brainstored a list of hypotheses that would be of interest by the end of our study. After reading the data, we identified the variables by type and category as well as getting the count of desired variables, such as workclass and education level. Some good practice data cleaning techniques we conducted included dropping duplicate and null values and finding spread of unique values.   
+
+- We decided to focus on a few independent variables, such as age, education and hours per week worked. Below is a table summarizing our data's descriptive statistics. Just by looking at the statistics, such standard deviations and quartiles, there were certain attributes we would like to investigate further in our learning. 
+
+![census_description](https://user-images.githubusercontent.com/68654746/198146984-9a471231-4242-41b2-b3b6-41b25485f523.jpg)
+
+- Next we conducted some univariable analysis for our categorical and continuous variables. First, we pulled unique values and examined if there were any duplicate values in each of the columns of the dataset to drop. Once our data was cleaned, we sorted each variable by value then made some visualizations to further understand the distribution of each category. After extracting some preliminary tables, we found that we still needed to drop several more columns and values in order to be able to develop better visualizations and statistical findings. That led us to created cleaned adult_c2.data, adult_c2.names, and census_data_education csv. Below are some bar charts and box plots found and some questions we hope to answer. 
+
+### **Hypotheses:**
+
+:monocle_face: Income is our dependent variable. It is important to keep in mind that less than a fourth of participants in this dataset make more than $50K a year in 1994.
+
+![income_grp](https://user-images.githubusercontent.com/68654746/200508629-b43a0c59-0c60-4f04-b3c9-35d4f4415ce0.jpg)
+
+:thinking: Older adults will likely have more experience and yield a higher income level than young adults. However, the working class would largely be made up of young adults as older adults will retire or work less than in their youth. The box plot shows the medium age is 37 years old with a cluster of outliers in the age group greater than 78 years old. 
 
 ![age_boxplot](https://user-images.githubusercontent.com/68654746/199134388-9dcec6d1-b5b2-418f-8d81-8e6374b94f8e.jpg)
 
-2. Country is expected to yield higher incomes in 1st world and capitalist countries of origin.
+:thinking: Adults with more years of education are expected to yield higher incomes than someone with high school degree or less.  However, higher education has become more and more difficult to attain over the years, and even with doctorate degree, students could be earning low to working-class wages depending on the industry and use in the labor force.  From today's statistics, we expect the master’s degree holders to earn the most and to be followed by the bachelor’s degree holders. The associates holders may or may not hit the threshold of $50K; whereas, the AA degree and high school graduates might be hovering on the fence around $50K.
 
-3. Education Level is expected to yield the lowest results at the extremes (high school or less, and doctorate).  With doctorates, many students are earning poverty-level wages by working for professors, or they major in something esoteric that does not connect to the labor force.  We would expect the Master’s degree holders to earn the most, followed by the Bachelor’s degree.  The Associates may or may not hit the threshold of $50K.  The AA degree may be a border zone where $50K begins for some people.
+The bar charts below show that most participants in the survey highest education level attained is a high school diploma, followed by some college degree and Bachelor's degree. Participants with a doctorate is among the lowest as without completing high school. 
 
 ![edu](https://user-images.githubusercontent.com/68654746/198147358-63467d2c-804e-4cb9-a200-0aeeb12a480e.jpg)
 ![image (3)](https://user-images.githubusercontent.com/68654746/198133670-6c39e672-a49c-47a1-a48a-fae35c1d9b52.png)
 
-4. Gender may be related in non-U.S. countries where the mother is more expected to stay home with children and/or work part-time, but we do not suspect it will matter much in the U.S.
+:thinking: Gender may be related in non-U.S. countries where the mother is more expected to stay home with children and/or work part-time, but we do not suspect it will matter much in the U.S., especially as females have emerged greatly in the work force over the years. It is important to note that in this 1994 survey, there is nearly double male participants than females. 
 
 ![sex](https://user-images.githubusercontent.com/68654746/198148017-d793c45f-306d-41a4-9923-409c5be9b3d8.jpg)
-![relationship](https://user-images.githubusercontent.com/68654746/198147622-6482ade6-3172-4f52-b260-f854a51b48b3.jpg)
 
-5.  Executive/professional work would likely yield higher income than clerical or service industry occupations.
+:thinking:  We would expect executive and professional work to yield higher income than clerical or service industry occupations. Briefly looking at the distribution of occupation and workclass, there are many occupation held but there are significantly more participants working in the private sector than any of the others. It would be of interest of ours to see whether occupation or workclass has more revelance to a predicator of income in our machine learning later on. 
+
 ![occupation](https://user-images.githubusercontent.com/68654746/198147513-793ea0b6-4d85-4253-8cae-c6946e5548d2.jpg)
-
 ![workclass](https://user-images.githubusercontent.com/68654746/198147245-5c5da75e-102f-4bd1-9fe1-8a54da7aeee4.jpg)
 
-6.  Race may not be relevant as of the date of this dataset, especially in countries where the nationality is homogeneous.
+:thinking:  Race may not be relevant as of the date of this dataset as white ethnicity make up the most in this dataset. It is also important to be aware that majority of the participants in this survey are native to the U.S.
+
 ![race](https://user-images.githubusercontent.com/68654746/198147978-ac58caf2-f2aa-4c3d-89a2-058b3310af41.jpg)
+![native_cntry](https://user-images.githubusercontent.com/68654746/200510085-83d6b0d4-cdb4-4dfe-aa86-9b0dddd5dfc9.jpg)
 
-7.  Families with children and married people may earn higher incomes than the unmarried and divorced.
+:thinking:  Households with children and married participants have the potential to earn higher incomes combined than those who are unmarried or divorced. But it is interesting to note from looking at our distribution below, married civilians make up most of our data but married armed forces account for the least. In the visual second below, the distribution in relationship status held by participants in this survey vary greatly. 
 
-![martialStatus](https://user-images.githubusercontent.com/68654746/198147503-e3e72ba6-2a25-497b-8ded-8de27fd223ba.jpg)
 ![image (5)](https://user-images.githubusercontent.com/68654746/198133705-af4e9333-d8fd-432d-8d5f-c962b369b1b4.png)
+![relationship](https://user-images.githubusercontent.com/68654746/198147622-6482ade6-3172-4f52-b260-f854a51b48b3.jpg)
 
-### Preliminary data preprocessing
-- Our first step was loading the data in Jupyter Notebook and performing a preliminary exploration of the 1994 Census dataset. Dropping a few columns first, we wanted to focus on age, final weight, education (in numerical form), capital gain and loss, and hours per week worked.  
+:thinking:  Also in our EDA, we produced a correlation matrix using seaborn library to find a fair idea of the correlation strength between different variables. From the heatmap below, it appears that education level (in numerical form) demonstrates the highest correlation of all our variables. 
 
-- Below is a table summarizing the data's descriptive statistics:
-![census_description](https://user-images.githubusercontent.com/68654746/198146984-9a471231-4242-41b2-b3b6-41b25485f523.jpg)
+![correlation](https://user-images.githubusercontent.com/68654746/198148402-3a81615b-e439-44b6-8ab4-6841a715b374.jpg)
+![correllation_seaborn](https://user-images.githubusercontent.com/68654746/198148454-676a70e3-cadb-49c7-b08b-60c5c387ebd7.jpg)
 
-- We then pulled unique values and examined if there were any duplicate values in each of the columns of the dataset. Once we cleaned our data, we extracted some preliminary tables, but found that we still needed to drop several more columns and values in order to be able to develop better visualizations and statistical findings. That led us to created cleaned adult_c2.data, adult_c2.names, and census_data_education csv. 
-
-- Further analysis and visualizations were completed using Python libraries and VBA. We also formed a connection string with SQLAlchemy and created a schema in PostgreSQL. 
-
-
+### Technologies & Languages used in Data Cleaning & Analysis
+Our analysis and visualizations were completed using Python libraries and VBA. We formed a connection string with SQLAlchemy and created a schema in PostgreSQL for our next steps in data analysis process. 
 
 # Database
 
@@ -83,11 +97,7 @@ We hope to answer the questions of which variables lead to higher income levels 
 
 ![ERD](https://user-images.githubusercontent.com/68654746/199123519-214ec72d-2913-477e-8102-7e0dd8b358ce.png)
 
-
 ### **[Link to SQL database](https://github.com/Faieee/final_project/blob/main/QuickDBD_schema.sql)** 
-
-![correlation](https://user-images.githubusercontent.com/68654746/198148402-3a81615b-e439-44b6-8ab4-6841a715b374.jpg)
-![correllation_seaborn](https://user-images.githubusercontent.com/68654746/198148454-676a70e3-cadb-49c7-b08b-60c5c387ebd7.jpg)
 
 - We merged PostgreSQL and our Jupyter Notebooks in order to extrapulate and form the tables we were interested in analyzing. Using PostgreSQL, we created a schema and uploaded the census_data.csv, and after exploratory data analysis created census_data_EDA.ipynb and census_data_EDA_rev2.ipynb. In another schema, we uploaded adult_c2.data.csv and wanted to look specifically at adult education level and capital gains. We are still working on this notebook under data_c2.ipynb. We may integrate Flask to display the data.
 
@@ -195,6 +205,8 @@ Recall: 75% of <$50k outcomes were found
 
 ![ConfusionSummary](https://user-images.githubusercontent.com/68654746/198142955-c1ef3571-0c0a-4daa-9201-f18cd82f4dec.jpg)
 
+**Variable Correlation Summary**
+<img src="https://github.com/Faieee/final_project/blob/main/Resources/images/VariableCorrelations.png">
 
 ### **Explanation of model choice, including limitations and benefits after the second iteration of machine learning**
 
@@ -215,16 +227,35 @@ Recall: 75% of <$50k outcomes were found
 
 **Report for this dashboard:**
 - **Age has the highest correlation to high/low 1994 income at 0.32.**
+
 - This visualization shows that the average age of respondents in the high income group was 44, while it was 34 in the low income group.
+<p align="center">
+  <img src="https://github.com/Faieee/final_project/blob/main/Resources/images/AgeStory.png">
+</p>
+
 - **The next highest correlation is Relationship at 0.16.** Marital Status, a similar variable, was 0.14. The underlying variable, sex, which only had a correlation of 0.02 may have accounted for this slight difference.
+<p align="center">
+  <img src="https://github.com/Faieee/final_project/blob/main/Resources/images/GraphTodayMarital.png">
+  <img src="https://github.com/Faieee/final_project/blob/main/Resources/images/MaritalStatusStory.png">
+</p>
+
 - Educational Attainment had a correlation of 0.14. Education levels vary across country of origin; however, higher earners in our U.S. dataset tended to have college degrees, whereas lower income earners tended to not have college degrees.
+<p align="center">
+  <img src="https://github.com/Faieee/final_project/blob/main/Resources/images/AvgEducationStory.png">
+</p>
+
 - Although race is not well correlated to income, our dataset had a preponderance of white people.
 - Higher income earners tended to have more capital gains, which stands to reason.
 - Low income earners worked 39 hours per week on average, while higher income earners worked 45.5 hours per week on average.
 
+- Workclass was not a factor on income level. 
+<p align="center">
+  <img src="https://github.com/Faieee/final_project/blob/main/Resources/images/SectorOccupationStory.png">
+</p>
 
 ### **[Link to Country comparision Tableau](https://public.tableau.com/app/profile/lina.valencia/viz/Income_Comparison_US_Dollars/IncomecomparisoninUSDollars?publish=yes)**
 
+:thinking:
 
 **Report for this dashboard:**
 - Within Tableau, we used the filter, highlight, and actions to create tables and charts similar to ones we've produced in Jupyter Notebook and SQL. 
@@ -244,3 +275,7 @@ Recall: 75% of <$50k outcomes were found
 - A few other websites are embedded also with links either underneath them or when you click on them.
 
 ![Amanda](https://github.com/Faieee/final_project/blob/main/static/images/Website_11-2-22.png)
+
+
+### Further investigation / What to do differently next time
+<img src="https://github.com/Faieee/final_project/blob/main/Resources/images/WageInflation.png">
