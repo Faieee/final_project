@@ -134,12 +134,12 @@
 - In the first attempt at machine learning, we set up six different supervised models, which were: Cluster Centroids, SMOTEENN, Naive Random Oversampling, SMOTE, Balanced Random Forest Classifier, and the Easy Ensemble with Adaptive Boost.  We selected almost all of the predictor variables in this first attempt to use as a baseline, which included: age, relationship, education category level, marital status, occupation, working class (AKA sector), race, and sex because they had a relevance of at least 0.02 to the model.
   - We did not include capital gains/loss because few records contained values in those columns, and the records that did contain values (particularly for capital gains) had substantially large values, which could have thrown off the model with outliers.  
   - In addition, the average hours worked in both groups was relatively comparable overall.  
-- **The end result of the first attempt was that the best overall model was the Easy Ensemble with Adaptive Boost, which we believed had the highest balanced accuracy because it avoids overfitting (which could be useful if future Census samples are taken and added to this dataset) and it tends to learn the best from the weaker classifiers.  Since we eliminated some of the anticipated noise and outliers, it seemed like this model was the most logical contender at outset.  
+- **The end result of the first attempt was that the best overall model was the Easy Ensemble with Adaptive Boost, which we believed had the highest balanced accuracy because it avoids overfitting (which could be useful if future Census samples are taken and added to this dataset) and it tends to learn the best from the weaker classifiers.  Since we eliminated some of the anticipated noise and outliers, it seemed like this model was the most logical contender at outset.**  
 - The variables in descending order of importance to the model were: age, relationship, and educational level as among the most relevant.  
 - Since race and sex were lowest-scoring, we planned to get rid of them on our second machine learning attempt; however, we were aware that sometimes variables can be statistically significant, but they simply had low “say” on the model.  Therefore, we did not anticipate that the Easy Ensemble with Adaptive Boost would perform any better on the second attempt, but we did want to see if other models could outperform it on the second attempt.
 
 ### Second Attempt
-- On the second attempt, we removed race and sex from the models, but this set of models performed worse across the board, so we reverted to the original model.  Thus, the pictures below represent the first iteration with the above-mentioned variables all included.
+- On the second attempt, we removed race and sex from the models, but this set of models performed worse across the board, so we reverted to the original model.  Thus, the pictures below represent the first attempt with the above-mentioned variables all included.
 
 
 ### **Machine Learning Models Considered and Eliminated:**
@@ -160,7 +160,7 @@
 
 ### **Summary of models by feature importance in descending order**
 
-- **The correlation coefficient of each variable to the model would be the main statistics that we examined, with age being the most relevant variable out of all of them.** 
+- **The correlation coefficient of each variable to the model would be the main statistic that we examined, with age being the most relevant predictor variable out of all of them.** 
 
 ![FeatureImportance](https://user-images.githubusercontent.com/68654746/198142756-45b8eac4-3b7f-403d-8140-f9aa926fbf5d.jpg)
 
@@ -169,11 +169,11 @@
 ![ConfusionSummary](https://user-images.githubusercontent.com/68654746/198142955-c1ef3571-0c0a-4daa-9201-f18cd82f4dec.jpg)
 
 ### Third Attempt 
-### **Explanation of model choice, including limitations and benefits after the second iteration of machine learning**
+### **Explanation of model choice, including limitations and benefits after the second attempt of machine learning**
 
 - We found that using the Ada Boost Easy Ensemble model produced the highest balanced accuracy the first time (relative to the second time).  This model is helpful in that it avoids overfitting and that it makes the most of the weak classifiers.  However, we did not believe that it was going to have much more accuracy the second time (with sex and race removed) because its main disadvantage is that it does not deal well with noise or outliers.
 
-- **After reviewing all six models under two iterations of variables (one with all major variables and one that eliminated the variables of little correlational significance), the EasyEnsembleClassifer model yields the best results with the highest balanced accuracy rate of 80.50%.**  The higher iteration was the one with all variables, even those of less significance, such as gender and race.  
+- **After reviewing all six models under two attempts of variables (one with all major variables and one that eliminated the variables of little correlational significance), the EasyEnsembleClassifer model yields the best results with the highest balanced accuracy rate of 80.50%.**  The higher iteration was the one with all variables, even those of less significance, such as gender and race.  
 
 - It may be essential to consider that the cleaned census education dataset may skew the results. Additionally, adults who received education in their native countries outside of the U.S. may have different standards. Thus, people from different backgrounds make it difficult to have comparable measures.
 
