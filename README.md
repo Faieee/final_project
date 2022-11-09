@@ -43,21 +43,26 @@
 
 
 ## Preliminary data cleaning
-- Our first step was loading the data into Jupyter Notebook and performing a preliminary exploration of the 1994 Census dataset using Pandas library. While we verified the potential use of the dataset for our final project, we brainstored a list of hypotheses that would be of interest by the end of our study. After reading the data, we identified the variables by type and category as well as getting the count of desired variables, such as workclass and education level. Some good practice data cleaning techniques we conducted included dropping duplicate and null values and finding spread of unique values.   
+- Our first step was loading the data into Jupyter Notebook and performing a preliminary exploration of the 1994 Census dataset using Pandas library. 
+- While we verified the potential use of the dataset for our final project, we brainstored a list of hypotheses that would be of interest by the end of our study. After reading the data, we identified the variables by type and category as well as getting the count of desired variables, such as workclass (sector) and education level. 
+- Some good practice data cleaning techniques we conducted included dropping duplicate and null values and finding the spread of unique values.   
 
 - We decided to focus on a few independent variables, such as age, education and hours per week worked. Below is a table summarizing our data's descriptive statistics. Just by looking at the statistics, such standard deviations and quartiles, there were certain attributes we would like to investigate further in our learning. 
 
 ![census_description](https://user-images.githubusercontent.com/68654746/198146984-9a471231-4242-41b2-b3b6-41b25485f523.jpg)
 
-- Next we conducted some univariable analysis for our categorical and continuous variables. First, we pulled unique values and examined if there were any duplicate values in each of the columns of the dataset to drop. Once our data was cleaned, we sorted each variable by value then made some visualizations to further understand the distribution of each category. After extracting some preliminary tables, we found that we still needed to drop several more columns and values in order to be able to develop better visualizations and statistical findings. That led us to created cleaned adult_c2.data, adult_c2.names, and census_data_education csv. Below are some bar charts and box plots found and some questions we hope to answer. 
+- Next we conducted some univariable analysis for our categorical and continuous variables. First, we pulled unique values and examined if there were any duplicate values in each of the columns of the dataset to drop. 
+- Once our data was cleaned, we sorted each variable by value then made some visualizations to further understand the distribution of each category. 
+- After extracting some preliminary tables, we found that we still needed to drop several more columns and values in order to be able to develop better visualizations and statistical findings. That led us to created cleaned adult_c2.data, adult_c2.names, and census_data_education csv. 
+- Below are some bar charts and box plots found and some questions we hope to answer. 
 
-### **Hypotheses:**
+### **Sample Characteristics:**
 
-:monocle_face: Income is our dependent variable. It is important to keep in mind that less than a fourth of participants in this dataset make more than $50K a year in 1994.
+:monocle_face: **Income is our dependent variable. It is important to keep in mind that less than a fourth of participants in this dataset make more than $50K a year in 1994.**
 
 ![income_grp](https://user-images.githubusercontent.com/68654746/200508629-b43a0c59-0c60-4f04-b3c9-35d4f4415ce0.jpg)
 
-:thinking: Older adults will likely have more experience and yield a higher income level than young adults. However, the working class would largely be made up of young adults as older adults will retire or work less than in their youth. The box plot shows the medium age is 37 years old with a cluster of outliers in the age group greater than 78 years old. 
+:thinking: Older adults will likely have more experience and have a better chance of yielding a higher income level than younger adults. The box plot shows the medium age is 37 years old with a cluster of outliers in the age group greater than 78 years old. 
 
 ![age_boxplot](https://user-images.githubusercontent.com/68654746/199134388-9dcec6d1-b5b2-418f-8d81-8e6374b94f8e.jpg)
 
