@@ -1,0 +1,25 @@
+Data Cleaning and Analysis:
+VBA
+Python (>3.10.5) libraries and visualization tools
+Pandas 1.4.2
+matplotlib 3.5.1
+seaborn 0.11.2
+SciPy 1.7.3
+NumPy 1.21.5
+NVivo version 12
+
+Database Storage:
+SQLAlchemy 1.4.42
+PostgreSQL 11.16
+pgAdmin4 6.8 
+
+Machine Learning:
+scikit-learn 1.0.2
+ imbalanced-learn 0.9.0
+sklearn.externals
+joblib
+
+Website:
+JavaScript ES2022
+HTML 5
+CSS
