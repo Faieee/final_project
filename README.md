@@ -122,29 +122,33 @@
 - In another schema, we uploaded adult_c2.data.csv and wanted to look specifically at adult education level and capital gains. 
 - CensusData_Education was used as the basis for the machine learning models.
 - We used SQL Alchemy to connect the database to the machine learning model.
-- We joined tables.
-
+- An inner join was used to connect native country to the country_group renamed field.
+-   The encoded one is found under the field "country_group corr."
 
 # Machine Learning Model 
 
-### **Description of preliminary feature engineering and preliminary feature selection, including their decision-making process**
-- **On the first iteration, we selected 'age', 'workclass', 'education_cat_lev', 'marital_status', 'occupation', 'relationship', 'race', 'sex', and 'income_lev' because they had a correlation of at least 0.02.  We did not include capital gains because it seemed to be less relevant than that.**
+## **Description of preliminary feature engineering and preliminary feature selection, including their decision-making process**
+- **The outcome variable was income level, which was either above or below $50K, so we knew that this would lend itself the most to supervised machine learning.**  
 
-- We felt most confident using SciKit-Learn to run classifications and clustering algorithms. We found that using the adaptive (ada) boost easy ensemble method produced the best results. 
+### First Attempt
+- In the first attempt at machine learning, we set up six different supervised models, which were: Cluster Centroids, SMOTEENN, Naive Random Oversampling, SMOTE, Balanced Random Forest Classifier, and the Easy Ensemble with Adaptive Boost.  We selected almost all of the predictor variables in this first attempt to use as a baseline, which included: age, relationship, education category level, marital status, occupation, working class (AKA sector), race, and sex because they had a relevance of at least 0.02 to the model.
+  - We did not include capital gains/loss because few records contained values in those columns, and the records that did contain values (particularly for capital gains) had substantially large values, which could have thrown off the model with outliers.  
+  - In addition, the average hours worked in both groups was relatively comparable overall.  
+- **The end result of the first attempt was that the best overall model was the Easy Ensemble with Adaptive Boost, which we believed had the highest balanced accuracy because it avoids overfitting (which could be useful if future Census samples are taken and added to this dataset) and it tends to learn the best from the weaker classifiers.  Since we eliminated some of the anticipated noise and outliers, it seemed like this model was the most logical contender at outset.  
+- The variables in descending order of importance to the model were: age, relationship, and educational level as among the most relevant.  
+- Since race and sex were lowest-scoring, we planned to get rid of them on our second machine learning attempt; however, we were aware that sometimes variables can be statistically significant, but they simply had low “say” on the model.  Therefore, we did not anticipate that the Easy Ensemble with Adaptive Boost would perform any better on the second attempt, but we did want to see if other models could outperform it on the second attempt.
 
-- (On the second iteration, we removed race and sex from the models, but this set of models performed worse across the board, so we reverted to the original model.  Thus, the pictures below represent the first iteration with the above-mentioned variables all included.)
+### Second Attempt
+- On the second attempt, we removed race and sex from the models, but this set of models performed worse across the board, so we reverted to the original model.  Thus, the pictures below represent the first iteration with the above-mentioned variables all included.
 
 
 ### **Description of how data was split into training and testing sets**
-
-- In addition to Ada Boost EasyEnsembleClassifier, we also compared other models, such as the naive random oversampling, SMOTE oversampling, ClusterCentroids resampler, SMOTEENN, and BalancedRandomForestClassifier.
-
 - We set "iter" to 500.  The outcome variable is the income level variable (whether it would be above or below $50,000).
 - We opted to stratify, because this stratify parameter splits it so that the proportion of values in the resulting sample will be the same as the proportion of values given to parameter stratify.
 
 
 
-### **naive random oversampling**
+### **Naive Random Oversampling**
 
 ![NaiveRandomOversampling](https://user-images.githubusercontent.com/68654746/198139966-1130bf4a-108b-495b-b213-57944ea27536.jpg)
 
