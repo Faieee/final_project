@@ -342,7 +342,7 @@ A matter of note with the "single" classifications is that the sample sizes were
 - Higher income earners tended to have more capital gains, which stands to reason.
 - Low income earners worked 39 hours per week on average, while higher income earners worked 45.5 hours per week on average.
 
-- Workclass was not a factor on income level. 
+- Workclass was not a major factor on income level. 
 <p align="center">
   <img src="https://github.com/Faieee/final_project/blob/main/Resources/images/SectorOccupationStory.png">
 </p>
@@ -359,17 +359,17 @@ A matter of note with the "single" classifications is that the sample sizes were
 - The purpose of this comparison is to show what the average income is in some of the countries the participants are from vs the income in the United States. 
 
 
-## :sunglasses: Website Progress:
+## :sunglasses: Website:
 - The website is created using HTML, CSS, and Javascript.  
 
 - The word cloud at the top is done in NVivo version 12, and this software reads the dataset and displays larger font for the words that appear most often.  This also helped to guide our understanding of which variables may have been more or less popular in the dataset, and confirmed our understanding that the dataset may be somewhat skewed toward white males who work in private sector.
 
 - The Tableaux are embedded so that the mouse can hover over and receive the descriptions.
 
-- A few other websites are embedded also with links either underneath them or when you click on them.
+- A few other websites and calculators are embedded also with links either underneath them or when you click on them.
 
 ![Amanda](https://github.com/Faieee/final_project/blob/main/static/images/Website_11-2-22.png)
 
 
 ### Further investigation / What to do differently next time
-<img src="https://github.com/Faieee/final_project/blob/main/Resources/images/WageInflation.png">
+
