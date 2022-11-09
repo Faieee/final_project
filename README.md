@@ -113,12 +113,16 @@
 
 **Below is our ERD diagram with relationships:**
 
-![ERD](https://user-images.githubusercontent.com/68654746/199123519-214ec72d-2913-477e-8102-7e0dd8b358ce.png)
+![ERD](https://github.com/Faieee/final_project/blob/main/ERDhorizontal.png)
 
 ### **[Link to SQL database](https://github.com/Faieee/final_project/blob/main/QuickDBD_schema.sql)** 
 
-- We merged PostgreSQL and our Jupyter Notebooks in order to extrapulate and form the tables we were interested in analyzing. Using PostgreSQL, we created a schema and uploaded the census_data.csv, and after exploratory data analysis created census_data_EDA.ipynb and census_data_EDA_rev2.ipynb. In another schema, we uploaded adult_c2.data.csv and wanted to look specifically at adult education level and capital gains. We are still working on this notebook under data_c2.ipynb. We may integrate Flask to display the data.
-
+- We merged PostgreSQL and our Jupyter Notebooks in order to extrapulate and form the tables we were interested in analyzing. 
+- Using PostgreSQL, we created a schema and uploaded the census_data.csv, and after exploratory data analysis created census_data_EDA.ipynb and census_data_EDA_rev2.ipynb. 
+- In another schema, we uploaded adult_c2.data.csv and wanted to look specifically at adult education level and capital gains. 
+- CensusData_Education was used as the basis for the machine learning models.
+- We used SQL Alchemy to connect the database to the machine learning model.
+- We joined tables.
 
 
 # Machine Learning Model 
