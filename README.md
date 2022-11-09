@@ -8,15 +8,14 @@
 
 ## Modeling and Forecasting Income Above or Below $50K in the United States in 1994
 
-### Topic & Data Source
-The dataset selected was derived from the Census.gov 1994 Adult Dataset, which looks at whether participants earn >$50,000 or <= $50,000 per year. In this dataset, there are 32,561 respondants and 14 columns with attributes that determine an adult's annual income. 
 
-Originally cleaned and donated by Ronny Kohavi and Barry Becker (Data Mining and Visualization, Silicon Graphics) on May 1996, the dataset can be found on UCI Machine Learning Repository: 
-https://archive.ics.uci.edu/ml/datasets/census+income 
+### Data Source
+- Originally cleaned and donated by Ronny Kohavi and Barry Becker (Data Mining and Visualization, Silicon Graphics) on May 1996, the dataset can be found on UCI Machine Learning Repository: **https://archive.ics.uci.edu/ml/datasets/census+income**
+- The dataset selected was derived from the Census.gov 1994 Adult Dataset, which looks at whether participants earn >$50,000 or <=$50,000 per year. 
+- In this dataset, there are 32,561 respondants and 14 columns with attributes that determine an adult's annual income. 
 
-Although the Census delays the publication of the adult dataset to protect the privacy of the respondents, we are interested in deep diving into the 1994 publication and then comparing it to the present day, even in the absence of a more current comparison dataset. For some brief background, an American income of $50,000 in 1994 is equivalent to approximately $100,000 today, as described in https://www.in2013dollars.com/us/inflation/1994?amount=50000. And so, the annual income disparity between the rich and the poor has been an evergrowing and hotly debated topic in the political arena, communities and households across the nation. For these reasons, we are all curious to see how, and if any of the variables collected in this survey, impact an individual's income potential. One limitation of this survey we noticed right away was the lack of a variable for "inherited wealth." However, the survey does collect the variable "capital gain," which could be a potential proxy.
 
-### **List of columns from the 1994 Census dataset:** 
+#### **The list of columns from the 1994 Census dataset are as follows:** 
 - **Column A = the participant ID number.**
 - **Column B =  age:** the respondent’s age as an integer. *(range from 17 - 90 years old)*
 - **Column C = workclass:** pertains to their sector of employment or independent contractor status.
@@ -34,6 +33,10 @@ Although the Census delays the publication of the adult dataset to protect the p
 - **Column N = hours_per_week:** this is the workweek of the respondent as a continuous number.
 - **Column O = native_country:** this is the respondent’s country of origin (if not born in the U.S.). The Census made spelling errors, which we keep until they can be cleaned. For example, Hong should say Hong-Kong, Trinadad should say Trinidad, Holand should say Holland, and Columbia should say Colombia. In addition, we do not know what South means. South could represent either South Korea or South Africa. We do not have reason to think it means South Sudan because it is 1994 data. *For now, these categories include Cambodia, Canada, China, Columbia, Cuba, Dominican-Republic, Ecuador, El-Salvador, England, France, Germany, Greece, Guatemala, Haiti, Holand-Netherlands, Honduras, Hong, Hungary, India, Iran, Ireland, Italy, Jamaica, Japan, Laos, Mexico, Nicaragua, Outlying-US(Guam-USVI-etc), Philippines, Poland, Portugal, Puerto-Rico, Scotland, South, Taiwan, Thailand, Trinadad&Tobago, Peru, United-States, Vietnam, and Yugoslavia.* 
 - **Column P = income:** this represents whether the respondent earns more or less than $50,000 annually, *using logic: <= 50K or >50K.*
+
+
+### Topic & Questions to Be Answered
+Although the Census delays the publication of the adult dataset to protect the privacy of the respondents, we are interested in deep diving into the 1994 publication and then comparing it to the present day, even in the absence of a more current comparison dataset. For some brief background, an American income of $50,000 in 1994 is equivalent to approximately $100,000 today, as described in https://www.in2013dollars.com/us/inflation/1994?amount=50000. And so, the annual income disparity between the rich and the poor has been an evergrowing and hotly debated topic in the political arena, communities and households across the nation. For these reasons, we are all curious to see how, and if any of the variables collected in this survey, impact an individual's income potential. One limitation of this survey we noticed right away was the lack of a variable for "inherited wealth." However, the survey does collect the variable "capital gain," which could be a potential proxy.
 
 ## Topic Interest
 We hope to find answers as to which variables will lead to higher or lower annual income levels. 
