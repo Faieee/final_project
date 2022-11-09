@@ -62,18 +62,24 @@
 
 ![income_grp](https://user-images.githubusercontent.com/68654746/200508629-b43a0c59-0c60-4f04-b3c9-35d4f4415ce0.jpg)
 
-:thinking: Older adults will likely have more experience and have a better chance of yielding a higher income level than younger adults. The box plot shows the medium age is 37 years old with a cluster of outliers in the age group greater than 78 years old. 
+:thinking: Older adults will likely have more experience and have a better chance of yielding an income level over $50K than younger adults. The box plot shows the median age is 37 years old with a cluster of outliers in the age group greater than 78 years old. 
 
 ![age_boxplot](https://user-images.githubusercontent.com/68654746/199134388-9dcec6d1-b5b2-418f-8d81-8e6374b94f8e.jpg)
 
-:thinking: Adults with more years of education are expected to yield higher incomes than someone with high school degree or less.  However, higher education has become more and more difficult to attain over the years, and even with doctorate degree, students could be earning low to working-class wages depending on the industry and use in the labor force.  From today's statistics, we expect the master’s degree holders to earn the most and to be followed by the bachelor’s degree holders. The associates holders may or may not hit the threshold of $50K; whereas, the AA degree and high school graduates might be hovering on the fence around $50K.
+:thinking: **Adults with more years of education have a better chance of being classified in the income group over $50K compared to someone with a high school degree or less.**  
+- The mode education category level was a high school degree in 1994.  
+- In this sample, after the high school diploma, the next most popular category was "some college", followed by Bachelor's degree. 
 
-The bar charts below show that most participants in the survey highest education level attained is a high school diploma, followed by some college degree and Bachelor's degree. Participants with a doctorate is among the lowest as without completing high school. 
 
 ![edu](https://user-images.githubusercontent.com/68654746/198147358-63467d2c-804e-4cb9-a200-0aeeb12a480e.jpg)
+
+
+- **The lowest "fnlwgt" educational bracket was graduate school.**
+- Doctoral degrees were less common than Pre-K through 8th grade-educations.  
 ![image (3)](https://user-images.githubusercontent.com/68654746/198133670-6c39e672-a49c-47a1-a48a-fae35c1d9b52.png)
 
-:thinking: Gender may be related in non-U.S. countries where the mother is more expected to stay home with children and/or work part-time, but we do not suspect it will matter much in the U.S., especially as females have emerged greatly in the work force over the years. It is important to note that in this 1994 survey, there is nearly double male participants than females. 
+
+:thinking: **This sample was 2/3 men and only 1/3 women.**
 
 ![sex](https://user-images.githubusercontent.com/68654746/198148017-d793c45f-306d-41a4-9923-409c5be9b3d8.jpg)
 
