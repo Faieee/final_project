@@ -39,8 +39,8 @@
 
 
 ## Topic & Questions to Be Answered
-- **We hope to find answers as to which variables will lead to higher or lower annual income levels.  In particular, we wish to know which factors could disadvantage a person's income level, if any.** 
-- This is an old dataset from 1994; however, another curiosity is whether the important variables in 1994 would still be important today, such as age, education level, and marital/family status.  For example, an American income of $50,000 in 1994 is equivalent to approximately $100,000 [today](https://www.in2013dollars.com/us/inflation/1994?amount=50000); nevertheless, the annual income disparity between the rich and the poor continues to be relevant. 
+- **We hope to find answers as to which variables will lead to higher or lower annual income levels.  In particular, we wish to know which factors could put a person in a disadvantage from earning a higher income level, if any.** 
+- This is an old dataset from 1994; however, another curiosity of ours is whether the important variables in 1994 would still be relevant today, such as age, education level, and marital/family status.  For example, an American income of $50,000 in 1994 is equivalent to approximately $100,000 [today](https://www.in2013dollars.com/us/inflation/1994?amount=50000); nevertheless, the annual income disparity between the rich and the poor continues to be relevant. 
 
 
 
@@ -99,14 +99,12 @@
 
 :thinking:  **The Relationship category is generally redundant to marital status**
 
-![image (5)](https://user-images.githubusercontent.com/68654746/198133705-af4e9333-d8fd-432d-8d5f-c962b369b1b4.png)
-![relationship](https://user-images.githubusercontent.com/68654746/198147622-6482ade6-3172-4f52-b260-f854a51b48b3.jpg)
+![relationship_combo](https://user-images.githubusercontent.com/68654746/200743711-64f27414-28e8-4f6b-aee5-52cf4ba01c82.jpg)
 
 :thinking:  **Also in our EDA, we produced a correlation matrix using seaborn library to find a fair idea of the correlation strength between different variables.  From the heatmap below, it appears that education level (in numerical form) demonstrates the highest correlation to income level of all our variables.** 
 
 ![correlation](https://user-images.githubusercontent.com/68654746/198148402-3a81615b-e439-44b6-8ab4-6841a715b374.jpg)
 ![correllation_seaborn](https://user-images.githubusercontent.com/68654746/198148454-676a70e3-cadb-49c7-b08b-60c5c387ebd7.jpg)
-
 
 
 # Database
@@ -146,55 +144,10 @@
 - We set "iter" to 500.  The outcome variable is the income level variable (whether it would be above or below $50,000).
 - We opted to stratify, because this stratify parameter splits it so that the proportion of values in the resulting sample will be the same as the proportion of values given to parameter stratify.
 
+### **Machine Learning Models**
+(click to enlarge)
 
-
-### **Naive Random Oversampling**
-
-![NaiveRandomOversampling](https://user-images.githubusercontent.com/68654746/198139966-1130bf4a-108b-495b-b213-57944ea27536.jpg)
-
-Balanced Accuracy: 0.7384790685541558 or 73.85%
-
-Precision: 91% for <$50k outcomes
-
-Recall: 71% of <$50k outcomes were found
-
-
-
-### **SMOTE oversampling**
-
-![SMOTE](https://user-images.githubusercontent.com/68654746/198140668-064d4645-65d2-4fb4-8eab-7524afbdc70d.jpg)
-
-Balanced Accuracy: 0.7406228479555395 or 74.06%
-
-Precision: 92% for <$50k outcomes
-
-Recall: 70% of <$50k outcomes were found
-
-
-
-### **ClusterCentroids undersampling**
-
-![ClusterCentroids](https://user-images.githubusercontent.com/68654746/198141085-42a4743c-08cd-4d09-ae27-78b1ff2adf9d.jpg)
-
-Balanced Accuracy: 0.7369091820621197 or 73.69%
-
-Precision: 92% for <$50k outcomes
-
-Recall: 66% of <$50k outcomes were found
-
-
-
-### **SMOTEENN**
-
-![SMOTEEN](https://user-images.githubusercontent.com/68654746/198141390-3f5227a5-8b31-4afa-ab66-547189405faa.jpg)
-
-Balanced Accuracy: 0.7369091820621197 or 73.69%
-
-Precision: 90% for <$50k outcomes
-
-Recall: 76% of <$50k outcomes were found
-
-
+![MLcombo](https://user-images.githubusercontent.com/68654746/200742838-4a9841a1-b4b0-46c3-91e5-c1483a96ec78.jpg)
 
 ### **EasyEnsembleClassifier**
 
@@ -207,20 +160,6 @@ Recall: 76% of <$50k outcomes were found
 **Recall: 76% of <$50k outcomes were found**
 
 
-
-### **BalancedRandomForestClassifier**
-
-![BalancedRandomForest](https://user-images.githubusercontent.com/68654746/198142393-15e38a7b-650f-456d-adbb-b5c3cdb78a25.jpg)
-
-Balanced Accuracy: 0.7893344741273003 or 78.93%
-
-Precision:  94% for <$50k outcomes
-
-Recall: 75% of <$50k outcomes were found
-
-
-
-
 ### **Summary of models by feature importance in descending order**
 
 - **The correlation coefficient of each variable to the model would be the main statistics that we examined, with age being the most relevant variable out of all of them.** 
@@ -231,6 +170,7 @@ Recall: 75% of <$50k outcomes were found
 
 ![ConfusionSummary](https://user-images.githubusercontent.com/68654746/198142955-c1ef3571-0c0a-4daa-9201-f18cd82f4dec.jpg)
 
+### Third Attempt 
 ### **Explanation of model choice, including limitations and benefits after the second iteration of machine learning**
 
 - We found that using the Ada Boost Easy Ensemble model produced the highest balanced accuracy the first time (relative to the second time).  This model is helpful in that it avoids overfitting and that it makes the most of the weak classifiers.  However, we did not believe that it was going to have much more accuracy the second time (with sex and race removed) because its main disadvantage is that it does not deal well with noise or outliers.
