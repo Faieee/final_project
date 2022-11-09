@@ -9,7 +9,8 @@
 ## Modeling and Forecasting Income Above or Below $50K in the United States in 1994
 
 ### Technologies & Languages used in Data Cleaning & Analysis
-Our analysis and visualizations were completed using Python libraries and VBA. We formed a connection string with SQLAlchemy and created a schema in PostgreSQL for our next steps in data analysis process. 
+- Our analysis was completed using [these technologies](https://github.com/Faieee/final_project/blob/main/Technologies%20Textfile.txt)
+- Our dashboard and storyboard visualizations were completed using Tableau.
 
 ### Data Source
 - Originally cleaned and donated by Ronny Kohavi and Barry Becker (Data Mining and Visualization, Silicon Graphics) on May 1996, the dataset can be found on UCI Machine Learning Repository: **https://archive.ics.uci.edu/ml/datasets/census+income**
