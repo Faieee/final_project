@@ -213,7 +213,73 @@ Recall: 75% of <$50k outcomes were found
 
 - It may be essential to consider that the cleaned census education dataset may skew the results. Additionally, adults who received education in their native countries outside of the U.S. may have different standards. Thus, people from different backgrounds make it difficult to have comparable measures.
 
+### **Exploration of feature combinations**
 
+By breaking up the dataset and using different combinations of features, we hoped to see different trends and patterns in our data. The key important features that were considered in this analysis were Education, Sex, and Marital Status. The emphasis was put on being able to predict whether or not an individual was making <$50k, so only the classification report for outcomes labeled "0" was analyzed.
+
+**Separation by Education**
+
+- High school grad or less
+
+![](/Resources/ml_results/high_school.png)
+
+- College grads
+
+![](/Resources/ml_results/college.png)
+
+While the accuracy of these models was the same, the < high school set had an almost perfect precision of 97% when looking at <$50k outcomes, at the cost of poor precision for >$50k outcomes. This pattern will be seen consistently, with a possible explanation being that most <$50k outcomes end up in the < high school demographic. 
+
+**Separation by Marital Status**
+
+- Married
+
+![](/Resources/ml_results/married.png)
+
+- Single
+
+![](/Resources/ml_results/single.png)
+
+This faces a similar situation to the education split, where the single dataset had great performance for prediction <$50 outcomes, but the married dataset had a ~70% rate for predicting all outcomes. Since "Single" was counted as "has never married" while "Married" was counted as "at one point was married", it is possible that young people overwhelmingly belong to the single group, and have great representation there.
+
+**Separation by Sex**
+
+- All males
+
+![](/Resources/ml_results/male_all_data.png)
+
+- All females
+
+![](/Resources/ml_results/female_all_data.png)
+
+- Male high school grad or less
+
+![](/Resources/ml_results/male_high_school.png)
+
+- Female high school grad or less
+
+![](/Resources/ml_results/female_high_school.png)
+
+- Male single
+
+![](/Resources/ml_results/male_single.png)
+
+- Female single
+
+![](/Resources/ml_results/female_single.png)
+
+A matter of note with the "single" classifications is that the sample sizes were starting to get relatively small, but useful information trends are still possible to retrieve from them. The most interesting matter of note is with the married female demographic. This subset had an unusually low accuracy, and we believe this to be attributed to the time this dataset was collected. Since this is from the 90's USA, the general social attitude was for young women to play a smaller role in the workforce compared to the more equal roles of today. Therefore, with the married female dataset, more members of the dataset could have less influence of their income compared to the members of the married male dataset, where more of the members were focused on making money.
+
+**Analysis of key demographic features**
+
+- Age, race, sex only
+
+![](/Resources/ml_results/age_race_sex.png)
+
+ - Age, race, sex, and education only
+
+ ![](/Resources/ml_results/age_race_sex_education.png)
+
+ With the models and analysis gained from working on this dataset, it may become necessary to compare it to other datasets, either from around the world or from a different time. Therefore, two subsets of the data were made that focus only on key demographic features. When looking at only the members' Age, Race, and Sex, we see a 70% accuracy for results. This is an incredible "at a glance" rate that allows us to compare this to most other datasets from other sources, since these features are almost certain to be included. Another analysis was done by also including Education into the aformentioned cluster, raising the accuracy up to nearly 75%.
 
 ## Presentation & Dashboard
 
