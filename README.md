@@ -125,6 +125,11 @@
 ## **Description of preliminary feature engineering and preliminary feature selection, including their decision-making process**
 - **The outcome variable was income level, which was either above or below $50K, so we knew that this would lend itself the most to supervised machine learning.**  
 
+
+### **Description of how data was split into training and testing sets**
+- We set "iter" to 500.  The outcome variable is the income level variable (whether it would be above or below $50,000).
+- We opted to stratify, because this stratify parameter splits it so that the proportion of values in the resulting sample will be the same as the proportion of values given to parameter stratify.
+
 ### First Attempt
 - In the first attempt at machine learning, we set up six different supervised models, which were: Cluster Centroids, SMOTEENN, Naive Random Oversampling, SMOTE, Balanced Random Forest Classifier, and the Easy Ensemble with Adaptive Boost.  We selected almost all of the predictor variables in this first attempt to use as a baseline, which included: age, relationship, education category level, marital status, occupation, working class (AKA sector), race, and sex because they had a relevance of at least 0.02 to the model.
   - We did not include capital gains/loss because few records contained values in those columns, and the records that did contain values (particularly for capital gains) had substantially large values, which could have thrown off the model with outliers.  
@@ -137,16 +142,12 @@
 - On the second attempt, we removed race and sex from the models, but this set of models performed worse across the board, so we reverted to the original model.  Thus, the pictures below represent the first iteration with the above-mentioned variables all included.
 
 
-### **Description of how data was split into training and testing sets**
-- We set "iter" to 500.  The outcome variable is the income level variable (whether it would be above or below $50,000).
-- We opted to stratify, because this stratify parameter splits it so that the proportion of values in the resulting sample will be the same as the proportion of values given to parameter stratify.
-
-### **Machine Learning Models**
+### **Machine Learning Models Considered and Eliminated:**
 (click to enlarge)
 
 ![MLcombo](https://user-images.githubusercontent.com/68654746/200742838-4a9841a1-b4b0-46c3-91e5-c1483a96ec78.jpg)
 
-### **EasyEnsembleClassifier**
+### **EasyEnsembleClassifier - Best Model that We Used**
 
 ![EasyEnsembleClassifier](https://user-images.githubusercontent.com/68654746/198141709-fd8e09d7-61cb-4896-b484-5775fcc93d4d.jpg)
 
