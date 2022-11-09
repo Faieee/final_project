@@ -8,6 +8,8 @@
 
 ## Modeling and Forecasting Income Above or Below $50K in the United States in 1994
 
+### Technologies & Languages used in Data Cleaning & Analysis
+Our analysis and visualizations were completed using Python libraries and VBA. We formed a connection string with SQLAlchemy and created a schema in PostgreSQL for our next steps in data analysis process. 
 
 ### Data Source
 - Originally cleaned and donated by Ronny Kohavi and Barry Becker (Data Mining and Visualization, Silicon Graphics) on May 1996, the dataset can be found on UCI Machine Learning Repository: **https://archive.ics.uci.edu/ml/datasets/census+income**
@@ -83,28 +85,28 @@
 
 ![sex](https://user-images.githubusercontent.com/68654746/198148017-d793c45f-306d-41a4-9923-409c5be9b3d8.jpg)
 
-:thinking:  We would expect executive and professional work to yield higher income than clerical or service industry occupations. Briefly looking at the distribution of occupation and workclass, there are many occupation held but there are significantly more participants working in the private sector than any of the others. It would be of interest of ours to see whether occupation or workclass has more revelance to a predicator of income in our machine learning later on. 
+:thinking:  **Looking at the distribution of occupations and workclass (sector), the participants mostly came from private sector; however, the occupational categories were generally represented across sectors.**
 
 ![occupation](https://user-images.githubusercontent.com/68654746/198147513-793ea0b6-4d85-4253-8cae-c6946e5548d2.jpg)
 ![workclass](https://user-images.githubusercontent.com/68654746/198147245-5c5da75e-102f-4bd1-9fe1-8a54da7aeee4.jpg)
 
-:thinking:  Race may not be relevant as of the date of this dataset as white ethnicity make up the most in this dataset. It is also important to be aware that majority of the participants in this survey are native to the U.S.
+:thinking:  **Most participants in this sample were white.**  
+- It is also important to be aware that majority of the participants in this survey are native to the U.S.
 
 ![race](https://user-images.githubusercontent.com/68654746/198147978-ac58caf2-f2aa-4c3d-89a2-058b3310af41.jpg)
 ![native_cntry](https://user-images.githubusercontent.com/68654746/200510085-83d6b0d4-cdb4-4dfe-aa86-9b0dddd5dfc9.jpg)
 
-:thinking:  Households with children and married participants have the potential to earn higher incomes combined than those who are unmarried or divorced. But it is interesting to note from looking at our distribution below, married civilians make up most of our data but married armed forces account for the least. In the visual second below, the distribution in relationship status held by participants in this survey vary greatly. 
+:thinking:  **The Relationship category is generally redundant to marital status**
 
 ![image (5)](https://user-images.githubusercontent.com/68654746/198133705-af4e9333-d8fd-432d-8d5f-c962b369b1b4.png)
 ![relationship](https://user-images.githubusercontent.com/68654746/198147622-6482ade6-3172-4f52-b260-f854a51b48b3.jpg)
 
-:thinking:  Also in our EDA, we produced a correlation matrix using seaborn library to find a fair idea of the correlation strength between different variables. From the heatmap below, it appears that education level (in numerical form) demonstrates the highest correlation of all our variables. 
+:thinking:  **Also in our EDA, we produced a correlation matrix using seaborn library to find a fair idea of the correlation strength between different variables.  From the heatmap below, it appears that education level (in numerical form) demonstrates the highest correlation to income level of all our variables.** 
 
 ![correlation](https://user-images.githubusercontent.com/68654746/198148402-3a81615b-e439-44b6-8ab4-6841a715b374.jpg)
 ![correllation_seaborn](https://user-images.githubusercontent.com/68654746/198148454-676a70e3-cadb-49c7-b08b-60c5c387ebd7.jpg)
 
-### Technologies & Languages used in Data Cleaning & Analysis
-Our analysis and visualizations were completed using Python libraries and VBA. We formed a connection string with SQLAlchemy and created a schema in PostgreSQL for our next steps in data analysis process. 
+
 
 # Database
 
