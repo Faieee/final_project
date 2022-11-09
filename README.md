@@ -88,14 +88,12 @@
 
 :thinking:  **Looking at the distribution of occupations and workclass (sector), the participants mostly came from private sector; however, the occupational categories were generally represented across sectors.**
 
-![occupation](https://user-images.githubusercontent.com/68654746/198147513-793ea0b6-4d85-4253-8cae-c6946e5548d2.jpg)
-![workclass](https://user-images.githubusercontent.com/68654746/198147245-5c5da75e-102f-4bd1-9fe1-8a54da7aeee4.jpg)
+![workclass_combo](https://user-images.githubusercontent.com/68654746/200744496-d98e9b20-f442-498a-830c-e8288c521bf4.jpg)
 
 :thinking:  **Most participants in this sample were white.**  
 - It is also important to be aware that majority of the participants in this survey are native to the U.S.
 
-![race](https://user-images.githubusercontent.com/68654746/198147978-ac58caf2-f2aa-4c3d-89a2-058b3310af41.jpg)
-![native_cntry](https://user-images.githubusercontent.com/68654746/200510085-83d6b0d4-cdb4-4dfe-aa86-9b0dddd5dfc9.jpg)
+![race_combo](https://user-images.githubusercontent.com/68654746/200744215-88e6c733-918b-479b-a6cb-a6eb6086b51c.jpg)
 
 :thinking:  **The Relationship category is generally redundant to marital status**
 
@@ -103,8 +101,7 @@
 
 :thinking:  **Also in our EDA, we produced a correlation matrix using seaborn library to find a fair idea of the correlation strength between different variables.  From the heatmap below, it appears that education level (in numerical form) demonstrates the highest correlation to income level of all our variables.** 
 
-![correlation](https://user-images.githubusercontent.com/68654746/198148402-3a81615b-e439-44b6-8ab4-6841a715b374.jpg)
-![correllation_seaborn](https://user-images.githubusercontent.com/68654746/198148454-676a70e3-cadb-49c7-b08b-60c5c387ebd7.jpg)
+![correlation_matrix_combo](https://user-images.githubusercontent.com/68654746/200744831-1514371a-ea4d-4efd-8b43-b4cb583ede7f.jpg)
 
 
 # Database
