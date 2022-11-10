@@ -297,6 +297,14 @@ A matter of note with the "single" classifications is that the sample sizes were
 - The purpose of this comparison is to show what the average income is in some of the countries the participants are from vs the income in the United States. 
 
 
+### Further investigation / What to do differently next time
+- We answered the question well of the factors that could lead Americans to make at or below $50K per year in 1994.  
+- The machine learning model had some notions of the factors that could lead Americans to make above $50K per year in 1994; however, this would be better in the future as a regression study that goes back to the original education number column from the original dataset and uses that as the benchmark of education.
+- In addition, capital gains and losses should be used more meaningfully in the future. 
+- With more recent data samples, this project would have been better as more of a time series to see the variables' performances over time.
+
+
+
 ## :sunglasses: Website:
 - The website is created using HTML, CSS, and Javascript.  
 
@@ -308,9 +316,3 @@ A matter of note with the "single" classifications is that the sample sizes were
 
 ![Amanda](https://github.com/Faieee/final_project/blob/main/static/images/WebsiteScreenCapture%2011-9-22.png)
 
-
-### Further investigation / What to do differently next time
-- We answered the question well of the factors that could lead Americans to make at or below $50K per year in 1994.  
-- The machine learning model had some notions of the factors that could lead Americans to make above $50K per year in 1994; however, this would be better in the future as a regression study that goes back to the original education number column from the original dataset and uses that as the benchmark of education.
-- In addition, capital gains and losses should be used more meaningfully in the future. 
-- With more recent data samples, this project would have been better as more of a time series to see the variables' performances over time.
