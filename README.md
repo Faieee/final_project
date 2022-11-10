@@ -306,7 +306,7 @@ A matter of note with the "single" classifications is that the sample sizes were
 
 - A few other websites and calculators are embedded also with links either underneath them or when you click on them.
 
-![Amanda](https://github.com/Faieee/final_project/blob/main/static/images/Website_11-2-22.png)
+![Amanda](https://github.com/Faieee/final_project/blob/main/static/images/WebsiteScreenCapture%2011-9-22.png)
 
 
 ### Further investigation / What to do differently next time
