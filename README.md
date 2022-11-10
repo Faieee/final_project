@@ -252,38 +252,6 @@ A matter of note with the "single" classifications is that the sample sizes were
 
 ### For our final dashboard, we are using Tableau and HTML:  **[Link to Fab5's Tableau Dashboard](https://public.tableau.com/app/profile/amanda8204/viz/FinalProject_16668222456730/Dashboard1)**
 
-**Report for this dashboard:**
-- **Age has the highest correlation to high/low 1994 income at 0.32.**
-
-*Variable Correlation Summary*
-<p>
-  <img src="https://github.com/Faieee/final_project/blob/main/Resources/images/VariableCorrelations.png">
-</p>
-
-- This visualization shows that the average age of respondents in the high income group was 44, while it was 34 in the low income group.
-<p align="center">
-  <img src="https://github.com/Faieee/final_project/blob/main/Resources/images/AgeStory.png">
-</p>
-
-- **The next highest correlation is Relationship at 0.16.** Marital Status, a similar variable, was 0.14. The underlying variable, sex, which only had a correlation of 0.02 may have accounted for this slight difference.
-<p align="center">
-  <img src="https://github.com/Faieee/final_project/blob/main/Resources/images/GraphTodayMarital.png">
-  <img src="https://github.com/Faieee/final_project/blob/main/Resources/images/MaritalStatusStory.png">
-</p>
-
-- Educational Attainment had a correlation of 0.14. Education levels vary across country of origin; however, higher earners in our U.S. dataset tended to have college degrees, whereas lower income earners tended to not have college degrees.
-<p align="center">
-  <img src="https://github.com/Faieee/final_project/blob/main/Resources/images/AvgEducationStory.png">
-</p>
-
-- Although race is not well correlated to income, our dataset had a preponderance of white people.
-- Higher income earners tended to have more capital gains, which stands to reason.
-- Low income earners worked 39 hours per week on average, while higher income earners worked 45.5 hours per week on average.
-
-- Workclass was not a major factor on income level. 
-<p align="center">
-  <img src="https://github.com/Faieee/final_project/blob/main/Resources/images/SectorOccupationStory.png">
-</p>
 
 ### **[Link to Country comparision Tableau](https://public.tableau.com/app/profile/lina.valencia/viz/Income_Comparison_US_Dollars/IncomecomparisoninUSDollars?publish=yes)**
 
