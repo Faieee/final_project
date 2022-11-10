@@ -261,7 +261,7 @@ A matter of note with the "single" classifications is that the sample sizes were
 - Within Tableau, we used the filter, highlight, and actions to create tables and charts similar to ones we've produced in Jupyter Notebook and SQL. 
 - We also wanted to incorporate the inflation rate website in our analysis so the URL action allowed us to display it in Tableau. 
 - One interactive chart we're interested in is hours worked per week. 
-- Tableau also includes comparative charts, derived from https://stats.oecd.org/index.aspx?queryid=66670, of various cuntries that match those from the original dataset. 
+- Tableau also includes comparative charts, derived from https://stats.oecd.org/index.aspx?queryid=66670, of various countries that match those from the original dataset. 
 - The purpose of this comparison is to show what the average income is in some of the countries the participants are from vs the income in the United States. 
 
 
